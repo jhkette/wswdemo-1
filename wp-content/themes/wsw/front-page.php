@@ -108,9 +108,11 @@
         </article>
         <article class="container-twitter">
           <h2>Twitter</h2>
+          [twitter]
+          <?php echo do_shortcode("[twitter]"); ?>
         </article>
 
-
+ 
       
       </div>
       <div class="container-third">

@@ -82,13 +82,13 @@ function google_calender_func()
         if ($events["items"]){
             $i = 0;
             foreach ($events["items"] as $event) {
-                // print_r($event);
+              
                 if( $i >= 3) break;
-                $string .= "<li> <a href='".esc_url($event["htmlLink"])."'><h3>".esc_html__($event["summary"])."</h3></a>";
-                $string .= "<p>".esc_html__($event["description"]). "</p>";
-                $date = explode("T", $event["start"]["dateTime"]);
-                $final_date = format_date($date[0]);
-                $string .= "<p>".esc_html__($final_date). "</p> </li>";
+                    $string .= "<li> <a href='".esc_url($event["htmlLink"])."'><h3>".esc_html__($event["summary"])."</h3></a>";
+                    $string .= "<p>".esc_html__($event["description"]). "</p>";
+                    $date = explode("T", $event["start"]["dateTime"]);
+                    $final_date = format_date($date[0]);
+                    $string .= "<p>".esc_html__($final_date). "</p> </li>";
                 
                 $i++;
             }
