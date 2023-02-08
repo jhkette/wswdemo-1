@@ -17,18 +17,29 @@
 
 
  function twitter_call(){
-    $remote_url = 'https://api.twitter.com/2/users/1311130765313351681/tweets?exclude=retweets&max_results=5&user.fields=profile_image_url,created_at&expansions=author_id';
-$id_token = 'AAAAAAAAAAAAAAAAAAAAABOulgEAAAAAbkmecjNGMtjbJNBOpYQJ9FjAorw%3DO56kDoU2ymuENPHA5iAdqQmq8W7aiDvz2RnYvHrV6HDjIBm9rp';
-$args = array(
+    $remote_url = 'https://api.twitter.com/2/users/1311130765313351681/tweets?exclude=retweets&max_results=5&user.fields=profile_image_url&expansions=author_id';
+    // this value should be defined in wp-config file
+    $id_token = TWEET_API;
+    $args = array(
     'headers'     => array(
         'Authorization' => 'Bearer ' . $id_token,
-    ),
-); 
-$result = wp_remote_get( $remote_url, $args );
-$body = wp_remote_retrieve_body($result);
+        ),
+    ); 
+    $string="";
+    $result = wp_remote_get( $remote_url, $args );
+    $body = wp_remote_retrieve_body($result);
+    $items = json_decode($body, true);
+   
+    $user_url = $items["includes"]["users"][0]["profile_image_url"];
+    $i = 0;
+    foreach($items["data"] as $item){
+        if( $i >= 4) break;
+        $string .= "<div class=\"container-tweet\"><p> <img src=\"".$user_url."\"/>".   $item["text"]."</p></div>";
+        $i++;
 
-return $body;
+    }
 
+    return $string;
  }
  add_shortcode("twitter", "twitter_call");
 

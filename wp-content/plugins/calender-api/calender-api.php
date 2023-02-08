@@ -66,7 +66,7 @@ function format_date($date){
 function google_calender_func()
 {
     $date = gmdate("Y-m-d\TH:i:s\Z"); // current date in correct format for api call
-    $api = "AIzaSyBs4W8WmNLu8Kx3H7b9bjYUn5qPYcRwo-k"; // api key
+    $api = GOOGLE_API; // api key define in wp-config 
     $baseparams = "orderBy=startTime&singleEvents=true&timeMin=" . $date; //params for url
     $url =
         "https://www.googleapis.com/calendar/v3/calendars/joseph.ketterer@gmail.com/events?" .
@@ -83,7 +83,7 @@ function google_calender_func()
             $i = 0;
             foreach ($events["items"] as $event) {
               
-                if( $i >= 3) break;
+                if( $i >= 4) break;
                     $string .= "<li> <a href='".esc_url($event["htmlLink"])."'><h3>".esc_html__($event["summary"])."</h3></a>";
                     $string .= "<p>".esc_html__($event["description"]). "</p>";
                     $date = explode("T", $event["start"]["dateTime"]);

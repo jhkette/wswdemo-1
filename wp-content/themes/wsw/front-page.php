@@ -10,7 +10,7 @@
     </div>
     <main class="main-body">
       <div class="lead">
-        <article class="container-club">
+        <section class="container-club">
           <h2>The Club</h2>
           <p>
             Based in Bury St Edmunds and formed in 1922, West Suffolk Wheelers
@@ -29,8 +29,8 @@
             <a href="#" class="join">Join now!</a>
           </div>
         
-        </article>
-        <article class="container-aims">
+</section>
+        <section class="container-aims">
           <h2>Our Aims</h2>
 
           <ul class="list-intro">
@@ -77,10 +77,10 @@
             </li>
           </ul>
         
-        </article>
+            </section>
       </div>
       <div class="container-secondary">
-        <article class="container-news">
+        <section class="container-news">
           <h2>Latest News</h2>
          <?php $homepagePosts = new WP_Query(array(
             'posts_per_page' => 3
@@ -92,7 +92,7 @@
             $homepagePosts->the_post(); ?>
           <article class="feature-item">
             <h3><?php esc_html__(the_title());?></h3>
-            <p> <?php echo esc_html__(wp_trim_words(get_the_content(), 20)); ?> </p>
+            <p> <?php echo esc_html__(wp_trim_words(get_the_content(), 25)); ?> </p>
             <a href="<?php  esc_url(the_permalink()); ?>" class="readmore"
               >Read more
               <div class="container-chevron" >
@@ -105,24 +105,24 @@
             ?><p>No posts to view.</p> <?php
           }?> 
         
-        </article>
-        <article class="container-twitter">
+        </section>
+        <aside class="container-twitter">
           <h2>Twitter</h2>
-          [twitter]
+      
           <?php echo do_shortcode("[twitter]"); ?>
-        </article>
+        </aside>
 
  
       
       </div>
       <div class="container-third">
-        <section class="container-calender">
+        <aside class="container-calender">
          
          
             <h2>Calender</h2>
             <?php echo do_shortcode("[google_calender]"); ?>
             </ul>
-        </section>
+        </aside>
         <section class="container-images">
           <div class="image-container">
             <div class="imagelink">

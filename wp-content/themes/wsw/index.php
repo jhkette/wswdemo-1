@@ -6,13 +6,13 @@
             <article class="post-item">
               <h2 class="headline"><a href="<?php  esc_url(the_permalink()); ?>"><?php the_title(); ?></a></h2>
               
-              <div class="metabox">
+              <div>
                 <p>Posted by <?php esc_html__(the_author_posts_link()); ?> on <?php esc_html__(the_time(
      "n.j.y"
  )); ?> in <?php echo get_the_category_list(", "); ?></p>
               </div>
         
-              <div class="generic-content">
+              <div>
                 <?php esc_html__(the_excerpt()); ?>
                 <div><p><a class="btn btn--blue" href="<?php esc_html__(the_permalink()); ?>">Continue reading</p>   <div class="container-chevron" id="chevron1">
                 <i class="fa-solid fa-chevron-right"></i
