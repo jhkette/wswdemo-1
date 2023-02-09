@@ -34,7 +34,7 @@
     $i = 0;
     foreach($items["data"] as $item){
         if( $i >= 4) break;
-        $string .= "<div class=\"container-tweet\"><p> <img src=\"".$user_url."\"/>".   $item["text"]."</p></div>";
+        $string .= "<div class=\"container-tweet\"> <img src=\"".$user_url."\"/><p>".   $item["text"]."</p></div>";
         $i++;
 
     }
@@ -43,27 +43,6 @@
  }
  add_shortcode("twitter", "twitter_call");
 
-//  curl --request GET --url 'https://api.twitter.com/2/tweets?ids=1260294888811347969&tweet.fields=attachments,author_id,created_at,public_metrics,source&expansions=attachments.media_keys' \
-//  --header 'Authorization: Bearer $BEARER_TOKEN'
-
-// curl --request GET --url 'https://api.twitter.com/2/tweets?ids=1260294888811347969&tweet.fields=attachments,author_id,created_at,public_metrics,source' \
-//   --header 'Authorization: Bearer $BEARER_TOKEN'
-
-
-// (async () => {
-//     try {
-//       const usersTweets = await twitterClient.tweets.usersIdTweets(
-  
-//         //The ID of the User to list Tweets of
-//         2244994945
-//       );
-//       console.dir(usersTweets, {
-//         depth: null,
-//       });
-//     } catch (error) {
-//       console.log(error);
-//     }
-//   })();
 
 
  ?>

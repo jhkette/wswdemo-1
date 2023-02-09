@@ -1,4 +1,6 @@
 <div class="container-footer">
+
+ 
         <footer>
           <div>
             <h3>Information</h3>
@@ -21,6 +23,7 @@
             </nav>
           </div>
         </footer>
+     
       </div>
       <?php wp_footer(); ?>
   </body>

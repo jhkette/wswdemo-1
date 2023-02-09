@@ -78,6 +78,7 @@ function move_admin_bar() {
     }
 add_action( 'wp_head', 'move_admin_bar' );
 
+
 include('custom-shortcodes.php');
 
 ?>

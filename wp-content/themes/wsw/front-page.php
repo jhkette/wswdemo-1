@@ -3,10 +3,14 @@
 
 
 <div class="carousel">
-      <div class="carousel-cell"  id="lead"><h1>Hello</h1></div>
-      <div class="carousel-cell" id="lead2"></div>
-      <div class="carousel-cell" id="lead3"></div>
-     
+
+<?php $a =( get_field('carousel') );?>
+<?php $b =( get_field('carousel2') );?>
+<?php $c =( get_field('carousel3') );?>
+  
+      <div class="carousel-cell" style="background-image:url('<?php echo($a['url']);?>')"><h1><?php echo($a['caption']); ?></h1></div>
+      <div class="carousel-cell" style="background-image:url('<?php echo($b['url']);?>')"><h1><?php echo($b['caption']); ?></h1></div>
+      <div class="carousel-cell" style="background-image:url('<?php echo($c['url']);?>')"><h1><?php echo($c['caption']); ?></h1></div>
     </div>
     <main class="main-body">
       <div class="lead">
@@ -25,6 +29,7 @@
             policy, so feel free to come along to one of our regular activities
             to see how you like us.
           </p>
+      
           <div class="button-container">
             <a href="#" class="join">Join now!</a>
           </div>
@@ -84,9 +89,8 @@
           <h2>Latest News</h2>
          <?php $homepagePosts = new WP_Query(array(
             'posts_per_page' => 3
-          )); ?>
+          )); 
 
-          <?php 
           if(have_posts()){
           while ($homepagePosts->have_posts()) {
             $homepagePosts->the_post(); ?>
@@ -155,7 +159,8 @@
         </section>
       </div>
       
-     
+  
+
      
     </main>
     <?php get_footer(); ?>
