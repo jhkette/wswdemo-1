@@ -1,6 +1,5 @@
 <?php
 
-
 function wsw_files()
 {
     wp_enqueue_script(
@@ -30,17 +29,14 @@ function wsw_files()
         "//cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
     );
 }
-    wp_enqueue_style(
-        "carousel",
-        get_template_directory_uri() . "/assets/css/slider.css"
-    );
-    wp_enqueue_style(
-        "wsw_main",
-        get_template_directory_uri() . "/assets/css/main.css"
-    );
-
-   
-   
+wp_enqueue_style(
+    "carousel",
+    get_template_directory_uri() . "/assets/css/slider.css"
+);
+wp_enqueue_style(
+    "wsw_main",
+    get_template_directory_uri() . "/assets/css/main.css"
+);
 
 add_action("wp_enqueue_scripts", "wsw_files");
 
@@ -52,13 +48,11 @@ function wsw_features()
 add_action("after_setup_theme", "wsw_features");
 
 // adds theme support for featured images
-add_theme_support( 'post-thumbnails' );
-
-
-
+add_theme_support("post-thumbnails");
 
 // move admin bar to the bottom of the page to allow user to access common links
-function move_admin_bar() {
+function move_admin_bar()
+{
     echo '
     <style type="text/css">
     body {margin-top: -28px;padding-bottom: 28px;}
@@ -75,10 +69,9 @@ function move_admin_bar() {
         bottom: 32px;
     }
     </style>';
-    }
-add_action( 'wp_head', 'move_admin_bar' );
+}
+add_action("wp_head", "move_admin_bar");
 
-
-include('custom-shortcodes.php');
+include "custom-shortcodes.php";
 
 ?>

@@ -19,7 +19,7 @@ while (have_posts()) {
             the_post_thumbnail();
         } ?>
           <div>
-        <p class="home-link"><a href="<?php echo site_url(
+        <p class="highlight-link"><a href="<?php echo site_url(
             "/news"
         ); ?>"><i class="fa fa-home" aria-hidden="true"></i> Blog Home</a></p> 
         <p>Posted by <?php the_author_posts_link(); ?> on <?php the_time(

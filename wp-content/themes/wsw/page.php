@@ -5,10 +5,7 @@ get_header(); ?>
 
 
 <div class="secondary-banner"> <h1><?php echo esc_html(get_the_title()); ?></h1>
-<?php 
-
-echo get_the_post_thumbnail(get_the_ID(),'medium');
- ?> 
+<?php echo get_the_post_thumbnail(get_the_ID(), "medium"); ?> 
 
 </div>
 
@@ -17,15 +14,13 @@ echo get_the_post_thumbnail(get_the_ID(),'medium');
 <div class="lead subpage">
             <nav role="navigation" id="navigation" class="secondary-nav">
               <?php $theParent = wp_get_post_parent_id(get_the_ID()); ?>
-            <h4 class="page-links__title"><a href="<?php echo esc_url(get_permalink(
-                $theParent
-            )); ?>"><?php echo get_the_title($theParent); ?></a></h4>
+            <h4 class="page-links__title"><a href="<?php echo esc_url(
+                get_permalink($theParent)
+            ); ?>"><?php echo get_the_title($theParent); ?></a></h4>
                 <ul class="nav-links">
                 
               
                 <?php
-              
-
                 // get the parent page - if it is a parent will be 0 - else function will return id of parent
                 $theParent = wp_get_post_parent_id(get_the_ID());
                 // if statement associates $findChildrenOf with the parent, or if value is zero, ie.
@@ -49,12 +44,12 @@ echo get_the_post_thumbnail(get_the_ID(),'medium');
 
         <section class="activities-container">
          
-            <?php  esc_html(the_content()); ?>
+            <?php esc_html(the_content()); ?>
         <!-- if there is no parent page found ie the page is the parent -->
          <?php if (!$theParent) { ?>
-           <div class="container">
+           <div class="container-events">
            
-            <?php  echo do_shortcode("[show_childpages]"); ?>
+            <?php echo do_shortcode("[show_childpages]"); ?>
           </div>
          
           <?php } ?>

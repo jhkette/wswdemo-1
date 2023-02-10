@@ -4,37 +4,38 @@
 
 <div class="carousel">
 
-<?php $a =( get_field('carousel') );?>
-<?php $b =( get_field('carousel2') );?>
-<?php $c =( get_field('carousel3') );?>
+<?php $a = get_field("carousel"); ?>
+<?php $b = get_field("carousel2"); ?>
+<?php $c = get_field("carousel3"); ?>
   
-      <div class="carousel-cell" style="background-image:url('<?php echo($a['url']);?>')"><h1><?php echo($a['caption']); ?></h1></div>
-      <div class="carousel-cell" style="background-image:url('<?php echo($b['url']);?>')"><h1><?php echo($b['caption']); ?></h1></div>
-      <div class="carousel-cell" style="background-image:url('<?php echo($c['url']);?>')"><h1><?php echo($c['caption']); ?></h1></div>
+      <div class="carousel-cell" style="background-image:url('<?php echo $a[
+          "url"
+      ]; ?>')"><h1><?php echo $a["caption"]; ?></h1></div>
+      <div class="carousel-cell" style="background-image:url('<?php echo $b[
+          "url"
+      ]; ?>')"><h1><?php echo $b["caption"]; ?></h1></div>
+      <div class="carousel-cell" style="background-image:url('<?php echo $c[
+          "url"
+      ]; ?>')"><h1><?php echo $c["caption"]; ?></h1></div>
     </div>
     <main class="main-body">
       <div class="lead">
         <section class="container-club">
           <h2>The Club</h2>
-          <p>
-            Based in Bury St Edmunds and formed in 1922, West Suffolk Wheelers
-            is a welcoming and friendly cycling and triathlon club. If you're
-            just getting into cycling for fitness or a race hardened triathlete,
-            you'll find something for you and plenty of like minded individuals
-            to help you achieve your goals.
-          </p>
-          <p>
-            There are activities and events on nearly every day of the week and
-            a thriving community to welcome you. We offer a "try before you buy"
-            policy, so feel free to come along to one of our regular activities
-            to see how you like us.
-          </p>
+          <?php if (have_posts()):
+              while (have_posts()):
+                  the_post();
+                  the_content();
+              endwhile;
+
+ 
+              endif; ?>
       
           <div class="button-container">
             <a href="#" class="join">Join now!</a>
           </div>
         
-</section>
+        </section>
         <section class="container-aims">
           <h2>Our Aims</h2>
 
@@ -87,27 +88,30 @@
       <div class="container-secondary">
         <section class="container-news">
           <h2>Latest News</h2>
-         <?php $homepagePosts = new WP_Query(array(
-            'posts_per_page' => 3
-          )); 
-
-          if(have_posts()){
-          while ($homepagePosts->have_posts()) {
-            $homepagePosts->the_post(); ?>
+         <?php
+         $homepagePosts = new WP_Query(["posts_per_page" => 3]);
+         if (have_posts()) {
+             while ($homepagePosts->have_posts()) {
+                 $homepagePosts->the_post(); ?>
           <article class="feature-item">
-            <h3><?php esc_html__(the_title());?></h3>
-            <p> <?php echo esc_html__(wp_trim_words(get_the_content(), 25)); ?> </p>
-            <a href="<?php  esc_url(the_permalink()); ?>" class="readmore"
+            <h3><?php esc_html__(the_title()); ?></h3>
+            <p> <?php echo esc_html__(
+                wp_trim_words(get_the_content(), 25)
+            ); ?> </p>
+            <a href="<?php esc_url(the_permalink()); ?>" class="readmore"
               >Read more
               <div class="container-chevron" >
                 <i class="fa-solid fa-chevron-right"></i
                 ><i class="fa-solid fa-chevron-right"></i></div
             ></a>
           </article>
-          <?php } wp_reset_postdata(); }
-          else{
-            ?><p>No posts to view.</p> <?php
-          }?> 
+          <?php
+             }
+             wp_reset_postdata();
+         } else {
+              ?><p>No posts to view.</p> <?php
+         }
+         ?> 
         
         </section>
         <aside class="container-twitter">
@@ -130,7 +134,7 @@
         <section class="container-images">
           <div class="image-container">
             <div class="imagelink">
-              <a href="<?php echo site_url("/activities")?>">
+              <a href="<?php echo site_url("/activities"); ?>">
                 <div class="authorimage one"></div>
               </a>
             </div>
@@ -138,7 +142,7 @@
           </div>
           <div class="image-container">
             <div class="imagelink">
-              <a href="<?php echo site_url("/events")?>">
+              <a href="<?php echo site_url("/events"); ?>">
                 <div class="authorimage two"></div>
               </a>
             </div>
@@ -150,7 +154,7 @@
           <div class="image-container">
             <div class="imagelink">
               <!-- cc licensed from https://www.flickr.com/photos/medmss/6882587043 -->
-              <a href="<?php echo site_url("/information")?>">
+              <a href="<?php echo site_url("/information"); ?>">
                 <div class="authorimage four"></div>
               </a>
             </div>

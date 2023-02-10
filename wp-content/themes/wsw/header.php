@@ -10,10 +10,16 @@
     <nav class="mobile-nav" id="mobile-nav">
       <ul>
         <li><a href="<?php echo esc_url(site_url("/")); ?>">Home</a></li>
-        <li><a href="<?php echo esc_url(site_url("/activities")); ?>">Activities</a></li>
-        <li><a href="<?php echo esc_url(site_url("/events")); ?>">Events</a></li>
+        <li><a href="<?php echo esc_url(
+            site_url("/activities")
+        ); ?>">Activities</a></li>
+        <li><a href="<?php echo esc_url(
+            site_url("/events")
+        ); ?>">Events</a></li>
         <li><a href="<?php echo esc_url(site_url("/news")); ?>">News</a></li>
-        <li><a href="<?php echo esc_url(site_url("/information")); ?>">Info</a></li>
+        <li><a href="<?php echo esc_url(
+            site_url("/information")
+        ); ?>">Info</a></li>
       </ul>
     </nav>
 
@@ -21,22 +27,32 @@
       <div class="common-container" id="commonlinks-cont">
         <nav class="common-links-nav">
           <ul>
-            <li><a href="<?php echo esc_url(site_url("/wp-admin")); ?>">Log in</a></li>
-            <li><a href="<?php echo esc_url(site_url("/calender")); ?>">Calender</a></li>
+            <li><a href="<?php echo esc_url(
+                site_url("/wp-admin")
+            ); ?>">Log in</a></li>
+            <li><a href="<?php echo esc_url(
+                site_url("/calender")
+            ); ?>">Calender</a></li>
             <li>Contact</li>
           </ul>
         </nav>
       </div>
       <header class="lead-header">
-      <a href="<?php echo esc_url(site_url("/"));?>"><nav id="logo"></nav></a>
+      <a href="<?php echo esc_url(site_url("/")); ?>"><nav id="logo"></nav></a>
         <div>
           <nav class="main-nav">
             <ul>
             <li><a href="<?php echo esc_url(site_url("/")); ?>">Home</a></li>
-        <li><a href="<?php echo esc_url(site_url("/activities")); ?>">Activities</a></li>
-        <li><a href="<?php echo esc_url(site_url("/events")); ?>">Events</a></li>
+        <li><a href="<?php echo esc_url(
+            site_url("/activities")
+        ); ?>">Activities</a></li>
+        <li><a href="<?php echo esc_url(
+            site_url("/events")
+        ); ?>">Events</a></li>
         <li><a href="<?php echo esc_url(site_url("/news")); ?>">News</a></li>
-        <li><a href="<?php echo esc_url(site_url("/information")); ?>">Info</a></li>
+        <li><a href="<?php echo esc_url(
+            site_url("/information")
+        ); ?>">Info</a></li>
             </ul>
           </nav>
         </div>
