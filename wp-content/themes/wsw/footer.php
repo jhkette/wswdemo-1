@@ -3,8 +3,9 @@
  
         <footer>
           <div>
-            <h3>Information</h3>
+           
             <nav class="footer">
+            <h3>Information</h3>
               <ul>
                 <li><a href="#">Calender</a></li>
                 <li><a href="#">Contact</a></li>
@@ -13,8 +14,9 @@
             </nav>
           </div>
           <div>
-            <h3>Social</h3>
+           
             <nav class="footer">
+            <h3>Social</h3>
               <ul>
                 <li><a href="#">Twitter</a></li>
                 <li><a href="#">Strava</a></li>

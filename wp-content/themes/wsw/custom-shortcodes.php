@@ -1,8 +1,12 @@
 <?php
 
+/* This is a custom shortcodes function that loops through all the child pages of a selected
+page and show the featured image of the child pages - with a title - in a gallert like format */ 
 function show_childpages_shortcode()
-{
+{   
+    // get current id
     $current_page_id = get_the_ID();
+    // get chiild pages in an array
     $child_pages = get_pages([
         "child_of" => $current_page_id,
     ]);

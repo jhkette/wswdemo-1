@@ -8,7 +8,8 @@
         the_content();
     endwhile;
 else:
-     ?>
+    ?>   <p>There is no information to show, please contact the administrator</p>
+    
 
 <?php
 endif; ?>

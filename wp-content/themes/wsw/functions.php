@@ -1,5 +1,6 @@
 <?php
 
+// enqueue all the nessesary scripts/css files to load site
 function wsw_files()
 {
     wp_enqueue_script(
@@ -28,18 +29,20 @@ function wsw_files()
         "icons",
         "//cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
     );
+    wp_enqueue_style(
+        "carousel",
+        get_template_directory_uri() . "/assets/css/slider.css"
+    );
+    wp_enqueue_style(
+        "wsw_main",
+        get_template_directory_uri() . "/assets/css/main.css"
+    );
 }
-wp_enqueue_style(
-    "carousel",
-    get_template_directory_uri() . "/assets/css/slider.css"
-);
-wp_enqueue_style(
-    "wsw_main",
-    get_template_directory_uri() . "/assets/css/main.css"
-);
 
+// action to enqueue scripts
 add_action("wp_enqueue_scripts", "wsw_files");
 
+// add title tags to pages
 function wsw_features()
 {
     add_theme_support("title-tag");

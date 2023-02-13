@@ -1,8 +1,17 @@
 <?php get_header(); ?>
 <main class="main-body">
   <div class="lead singlecontainer">
-          <?php while (have_posts()) {
-              the_post(); ?>
+          <?php 
+          $args = array(
+            'posts_per_page' => 5,
+          'orderby', 'date',
+          'order', 'DESC'
+        );
+       
+            if (have_posts()){
+           
+          while (have_posts()) {
+            the_post(); ?>
               <article class="post-item">
                 <h2 class="headline"><a href="<?php esc_url(
                     the_permalink()
@@ -25,10 +34,22 @@
                   ><i class="fa-solid fa-chevron-right"></i></div
               ></a></div>
                 </div>
-          <?php  ?>
+         
             </article>
             <?php
-          } ?>  <div><p>  <?php echo paginate_links(); ?> <p></div> 
+          }
+       
+       
+        }?>
+        
+            <div><p>  <?php echo paginate_links(); ?> <p></div> 
+            
+          
+         
+
+
+
+         
                     
   </div>
 </main>
