@@ -6,15 +6,15 @@ while (have_posts()) {
     the_post(); ?>
     <div class="page-banner">
   
-    <article class="post-item">
+    <div class="post-item">
         <h2 class="page-banner__title"><?php esc_html__(the_title()); ?></h2>
         <div class="page-banner__intro">
        
         </div>
-  </article>  
+</div>  
     </div>
    <div class ="lead singlecontainer">
-    <article class="post-item">
+    <div class="post-item">
         <?php if (has_post_thumbnail()) {
             the_post_thumbnail();
         } ?>
@@ -29,8 +29,8 @@ while (have_posts()) {
 
       <div class="generic-content"><?php esc_html__(the_content()); ?></div>
 
-  </article>
-  </div>
+</div>
+</div>
     
 
     
