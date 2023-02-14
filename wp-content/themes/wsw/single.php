@@ -22,9 +22,9 @@ while (have_posts()) {
         <p class="highlight-link"><a href="<?php echo site_url(
             "/news"
         ); ?>"><i class="fa fa-home" aria-hidden="true"></i> Blog Home</a></p> 
-        <p>Posted by <?php the_author_posts_link(); ?> on <?php the_time(
+        <p>Posted by <span class="blog-category"><?php the_author_posts_link(); ?></span> on <?php the_time(
      "n.j.y"
- ); ?> in <?php echo get_the_category_list(", "); ?></p>
+ ); ?> in <span class="blog-category"><?php echo get_the_category_list(", "); ?></span></p>
       </div>
 
       <div class="generic-content"><?php esc_html__(the_content()); ?></div>

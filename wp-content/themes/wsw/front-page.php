@@ -100,7 +100,7 @@
             ); ?> </p>
             <a href="<?php esc_url(the_permalink()); ?>" class="readmore"
               >Read more
-              <div class="container-chevron" >
+              <div class="container-chevron" id="<?php echo(get_the_ID(the_post()))?>">
                 <i class="fa-solid fa-chevron-right"></i
                 ><i class="fa-solid fa-chevron-right"></i></div
             ></a>

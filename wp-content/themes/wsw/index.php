@@ -1,12 +1,8 @@
 <?php get_header(); ?>
 <main class="main-body">
-  <div class="lead singlecontainer">
+  <div class="lead singlecontainer news">
           <?php 
-          $args = array(
-            'posts_per_page' => 5,
-          'orderby', 'date',
-          'order', 'DESC'
-        );
+      
        
             if (have_posts()){
            
@@ -18,21 +14,21 @@
                 ); ?>"><?php the_title(); ?></a></h2>
                 
                 <div>
-                  <p class="highlight-link">Posted by <?php esc_html__(
+                  <p class="highlight-link">Posted by <span class="blog-category"><?php esc_url(
                       the_author_posts_link()
-                  ); ?> on <?php esc_html__(
+                  ); ?></span> on <?php esc_html__(
       the_time("n.j.y")
-  ); ?> in <?php echo get_the_category_list(", "); ?></p>
+  ); ?> in <span class="blog-category"><?php echo get_the_category_list(", "); ?></span></p>
                 </div>
           
                 <div>
                   <?php esc_html__(the_excerpt()); ?>
-                  <div class="container-reading"><p ><a href="<?php esc_html__(
-                      the_permalink()
-                  ); ?>">Continue reading</p>   <div class="container-chevron" id="chevron1">
-                  <i class="fa-solid fa-chevron-right"></i
-                  ><i class="fa-solid fa-chevron-right"></i></div
-              ></a></div>
+                  <a href="<?php esc_url(the_permalink()); ?>" class="readmore"
+              >Read more
+              <div class="container-chevron" id="<?php echo esc_html__(get_the_ID(the_post()))?>">
+                <i class="fa-solid fa-chevron-right"></i
+                ><i class="fa-solid fa-chevron-right"></i></div
+            ></a>
                 </div>
          
             </article>
