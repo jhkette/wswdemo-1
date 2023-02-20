@@ -75,6 +75,14 @@ function move_admin_bar()
 }
 add_action("wp_head", "move_admin_bar");
 
+function block_theme_setup(){
+     add_theme_support("editor-styles");
+     add_editor_style(get_template_directory_uri() . "/assets/css/style-editor.css");
+}
+
+
+add_action('after_setup_theme', 'block_theme_setup');
+
 include "custom-shortcodes.php";
 
 ?>
