@@ -13,10 +13,10 @@ function show_childpages_shortcode()
 
     $output = "";
     if ($child_pages) {
-        foreach ($child_pages as $item) {
-            $title = $item->post_title;
+        foreach ($child_pages as $page) {
+            $title = $page->post_title;
 
-            $id = $item->ID;
+            $id = $page->ID;
             $link = esc_url(get_permalink($id));
 
             $page_img = get_post_thumbnail_id($id);

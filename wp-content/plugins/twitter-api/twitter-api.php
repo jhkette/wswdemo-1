@@ -32,27 +32,27 @@
     // initialise empty string variable
     $string="";
     try{
-    // get rsult from api with url and args as arguments
-    $result = wp_remote_get( $remote_url, $args );
-    // get the body of data
-    $body = wp_remote_retrieve_body($result);
-    // decode json format to php
-    $items = json_decode($body, true);
-    // get the url for image profile alongside tweet
-    $user_url = $items["includes"]["users"][0]["profile_image_url"];
-    $i = 0;
+        // get rsult from api with url and args as arguments
+        $result = wp_remote_get( $remote_url, $args );
+        // get the body of data
+        $body = wp_remote_retrieve_body($result);
+        // decode json format to php
+        $items = json_decode($body, true);
+        // get the url for image profile alongside tweet
+        $user_url = $items["includes"]["users"][0]["profile_image_url"];
+        $i = 0;
 
-    // loop through each tweet
-    foreach($items["data"] as $item){
-        // if more than 4 break from loop
-        if( $i >= 4) break;
-        // construct html string with each tweet with a profile pic
-        $string .= "<div class=\"container-tweet\"> <img src=\"".esc_url($user_url)."\"/><p>".esc_html($item["text"])."</p></div>";
-        $i++;
+        // loop through each tweet
+        foreach($items["data"] as $item){
+            // if more than 4 break from loop
+            if( $i >= 4) break;
+            // construct html string with each tweet with a profile pic
+            $string .= "<div class=\"container-tweet\"> <img src=\"".esc_url($user_url)."\"/><p>".esc_html($item["text"])."</p></div>";
+            $i++;
 
-    }
-    // return the string value
-    return $string;
+        }
+        // return the string value
+        return $string;
     }
     catch (\Throwable $th) {
         // return error mesage
