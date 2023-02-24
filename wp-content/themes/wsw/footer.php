@@ -1,9 +1,6 @@
 <div class="container-footer">
-
- 
         <footer>
           <div>
-           
             <nav class="footer">
             <h3>Information</h3>
               <ul>
