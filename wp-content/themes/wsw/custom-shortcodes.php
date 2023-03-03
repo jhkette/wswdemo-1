@@ -26,12 +26,12 @@ function show_childpages_shortcode()
             );
 
             $html =
-                "<div class=\"image-container activities\"><div class=\"imagelink activities\"> <a href=\"" .
+                "<div class=\"image-container activities\" role=\"navigation\"><div class=\"imagelink activities\"> <a href=\"" .
                 $link .
                 "\">
            <div class=\"authorimage\" style=\"background-image: url('" .
                 $thumbnail_url .
-                "')\";></div></a></div><h3>" .
+                "')\"></div></a></div><h3>" .
                 $title .
                 "</h3></div>";
             $output .= $html;

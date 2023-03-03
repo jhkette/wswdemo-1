@@ -1,7 +1,7 @@
 <div class="container-footer">
-        <footer>
+        <footer role="contentinfo">
           <div>
-            <nav class="footer">
+            <nav class="footer" role="navigation">
             <h3>Information</h3>
               <ul>
                 <li><a href="#">Calender</a></li>
@@ -12,7 +12,7 @@
           </div>
           <div>
            
-            <nav class="footer">
+            <nav class="footer" role="navigation">
             <h3>Social</h3>
               <ul>
                 <li><a href="#">Twitter</a></li>

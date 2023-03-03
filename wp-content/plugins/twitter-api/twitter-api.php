@@ -11,9 +11,9 @@
  * Description: Gets information from the twitter api and outputs event as html list
  * Version: 0.0.1
  * Author: Joseph Ketterer
- * Author URI: https://mysite.com
+ * Author URI: https://jketterer.netlify.app/ 
  * License: GPL v2 or later
- * License URI: https://jketterer.netlify.app/ */
+ */
 
 
  function twitter_call(){
@@ -47,7 +47,7 @@
             // if more than 4 break from loop
             if( $i >= 4) break;
             // construct html string with each tweet with a profile pic
-            $string .= "<div class=\"container-tweet\"> <img src=\"".esc_url($user_url)."\"/><p>".esc_html($item["text"])."</p></div>";
+            $string .= "<div class=\"container-tweet\"> <img src=\"".esc_url($user_url)."\" alt=\"profile image\"/><p>".esc_html($item["text"])."</p></div>";
             $i++;
 
         }

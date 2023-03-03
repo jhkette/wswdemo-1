@@ -80,6 +80,7 @@ function google_calender_func()
         $string = "";
 
         if ($events["items"]){
+            $string .= "<ul>";
             $i = 0;
             foreach ($events["items"] as $event) {
               
@@ -92,6 +93,9 @@ function google_calender_func()
                 
                 $i++;
             }
+            $string .= "</ul>";
+
+        
         return $string;
     }else{
         return $string .= "There are no events scheduled at the moment";

@@ -82,3 +82,5 @@ wp-content/plugins/hello.php
 # track these themes
 !wp-content/themes/wsw/
 !wp-content/themes/plugins/calender-api/
+!wp-content/themes/plugins/block/
+!wp-content/themes/plugins/twitter-api/

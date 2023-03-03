@@ -100,7 +100,7 @@
             ); ?> </p>
             <a href="<?php esc_url(the_permalink()); ?>" class="readmore"
               >Read more
-              <div class="container-chevron" id="<?php echo(get_the_ID(the_post()))?>">
+              <div class="container-chevron" id="<?php echo esc_html__(get_the_ID())?>">
                 <i class="fa-solid fa-chevron-right"></i
                 ><i class="fa-solid fa-chevron-right"></i></div
             ></a>
@@ -114,23 +114,23 @@
          ?> 
         
         </section>
-        <aside class="container-twitter">
+        <section class="container-twitter">
           <h2>Twitter</h2>
       
           <?php echo do_shortcode("[twitter]"); ?>
-        </aside>
+        </section>
 
  
       
       </div>
       <div class="container-third">
-        <aside class="container-calender">
+        <section class="container-calender">
          
          
             <h2>Calender</h2>
             <?php echo do_shortcode("[google_calender]"); ?>
-            </ul>
-        </aside>
+            
+        </section>
         <section class="container-images">
           <div class="image-container">
             <div class="imagelink">
