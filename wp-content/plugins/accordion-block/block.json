@@ -1,0 +1,13 @@
+{
+    "apiVersion": 2,
+    "name": "block/accordion",
+    "title": "Accordion",
+    "description": "accordion drop down",
+    "category": "text",
+    "icon": "arrow-down-alt2",
+    "textdomain": "firstblock",
+    "editorScript": "file:./build/index.js",
+    "style": "file:./build/style-index.css",
+    "editorStyle": "file:./build/index.css"
+
+}

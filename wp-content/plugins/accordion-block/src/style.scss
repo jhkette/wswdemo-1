@@ -1,0 +1,76 @@
+// $colour: red;
+// .wp-block-blocks-course-firstblock {
+//     background-color: $colour;
+// }
+
+.question-answer{
+  margin: 1.5rem 0;
+
+  p{
+    font-size: 1rem;
+  }
+}
+
+
+
+.question-container {
+    display: flex;
+    width: 90%;
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: center;
+    align-items: center;
+    cursor: pointer;
+    padding: .5rem 1rem;
+    border-top: 1px dashed var(--line);
+    border-bottom: 1px dashed var(--line);
+    h4{
+      font-size: 1rem;
+
+    }
+  }
+  
+
+.answer-container {
+    background-color: #e2e2e26b;
+    border-bottom: 1px dashed var(--line);
+    padding: .5rem 1rem;
+    width: 90%;
+    visibility: hidden;
+    opacity: 0;
+    max-height: 0;
+    transition: visibility 0s, opacity 0.5s max-height 0.5s linear;
+   
+  }
+
+  .answer-container.hidden{
+    visibility: visible;
+    opacity: 1;
+  }
+
+  .answer-container.visible{
+    visibility: visible;
+    opacity: 1;
+    max-height: 1200px;
+    transition: max-height 0.9s ease-in;
+  
+  
+  } 
+  
+
+.block-editor-rich-text__editable.answer-container.rich-text {
+	width: 65%;
+	margin: auto;
+	background-color: #b9b9b9;
+	padding: 1rem 1.35rem;
+}
+
+.fa-arrow-down {
+	height: 1.25rem;
+    transition: .3s;
+}
+
+
+.fa-arrow-down.rotated{
+    transform: rotate(180deg);
+  }
