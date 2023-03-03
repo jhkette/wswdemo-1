@@ -3,7 +3,7 @@
 get_header();
 
 while (have_posts()) {
-    the_post(); ?>
+	the_post(); ?>
     <div class="page-banner">
   
     <div class="post-item">
@@ -16,15 +16,17 @@ while (have_posts()) {
    <div class ="lead singlecontainer">
     <div class="post-item">
         <?php if (has_post_thumbnail()) {
-            the_post_thumbnail();
+        	the_post_thumbnail();
         } ?>
           <div>
         <p class="highlight-link"><a href="<?php echo site_url(
-            "/news"
+        	'/news'
         ); ?>"><i class="fa fa-home" aria-hidden="true"></i> Blog Home</a></p> 
         <p>Posted by <span class="blog-category"><?php the_author_posts_link(); ?></span> on <?php the_time(
-     "n.j.y"
- ); ?> in <span class="blog-category"><?php echo get_the_category_list(", "); ?></span></p>
+	'n.j.y'
+); ?> in <span class="blog-category"><?php echo get_the_category_list(
+ 	', '
+ ); ?></span></p>
       </div>
 
       <div class="generic-content"><?php esc_html__(the_content()); ?></div>

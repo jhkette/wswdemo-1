@@ -8,6 +8,7 @@ import { useEffect } from 'react';
 import './editor.scss';
 
 export default function Edit({ attributes, setAttributes }) {
+	// destructure attributes of the block which are defined in index.js
 	const { question, answer, answerId, arrowId } = attributes;
 
 	useEffect(() => {

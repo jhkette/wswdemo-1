@@ -4,19 +4,26 @@
 
 <div class="carousel">
 
-<?php $a = get_field("carousel"); ?>
-<?php $b = get_field("carousel2"); ?>
-<?php $c = get_field("carousel3"); ?>
-  
-      <div class="carousel-cell" style="background-image:url('<?php echo $a[
+  <?php 
+      // these variables come from advanced custom field images called carousel, carousel1 etc
+      // they can only be uploaded on the home page
+      $image1 = get_field("carousel"); 
+      $image2 = get_field("carousel2"); 
+      $image3 = get_field("carousel3"); 
+      $image4 = get_field("carousel4"); ?>
+     <!-- here i am adding some conditional checks to only display image field if it present and uploaded -->
+     <?php  if($image1) {?> <div class="carousel-cell" style="background-image:url('<?php echo $image1[
           "url"
-      ]; ?>')"><h1><?php echo $a["caption"]; ?></h1></div>
-      <div class="carousel-cell" style="background-image:url('<?php echo $b[
+      ]; ?>')"><h1><?php echo $image1["caption"]; ?></h1></div><?php };?>
+      <?php  if($image2) {?> <div class="carousel-cell" style="background-image:url('<?php echo $image2[
           "url"
-      ]; ?>')"><h1><?php echo $b["caption"]; ?></h1></div>
-      <div class="carousel-cell" style="background-image:url('<?php echo $c[
+      ]; ?>')"><h1><?php echo $image2["caption"]; ?></h1></div><?php };?>
+      <?php  if($image3) {?>  <div class="carousel-cell" style="background-image:url('<?php echo $image3[
           "url"
-      ]; ?>')"><h1><?php echo $c["caption"]; ?></h1></div>
+      ]; ?>')"><h1><?php echo $image3["caption"]; ?></h1></div><?php };?>
+        <?php  if($image4) {?>  <div class="carousel-cell" style="background-image:url('<?php echo $image4[
+          "url"
+      ]; ?>')"><h1><?php echo $image4["caption"]; ?></h1></div><?php };?>
     </div>
     <main class="main-body">
       <div class="lead">
