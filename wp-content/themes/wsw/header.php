@@ -37,7 +37,7 @@
           </ul>
         </nav>
       </div>
-      <header class="lead-header" role="banner>
+      <header class="lead-header" role="banner">
       <a href="<?php echo esc_url(site_url('/')); ?>"><nav id="logo"></nav></a>
         <div>
           <nav class="main-nav" role="navigation">

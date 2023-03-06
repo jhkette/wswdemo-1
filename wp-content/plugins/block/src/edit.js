@@ -12,8 +12,11 @@ export default function Edit({ attributes, setAttributes }) {
 	const { question, answer, answerId, arrowId } = attributes;
 
 	useEffect(() => {
-		setAttributes({ arrowId: uuidv4(), answerId: uuidv4() });
-	}, []);
+		setAttributes({
+			arrowId: uuidv4(),
+			answerId: uuidv4(),
+		});
+	}, [setAttributes]);
 
 	return (
 		<article className="question-answer">
@@ -41,7 +44,7 @@ export default function Edit({ attributes, setAttributes }) {
 				tagName="p"
 				allowedFormats={['core/bold']}
 				className="question heading"
-				id={answerId}
+				data={answerId}
 			/>
 		</article>
 	);

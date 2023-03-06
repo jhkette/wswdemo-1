@@ -33,7 +33,7 @@
     visibility: hidden;
     opacity: 0;
     max-height: 0;
-    transition: visibility 0s, opacity 0.5s max-height 0.5s linear;
+    transition: 0.5s ease-in-out;
    
   }
 
@@ -46,7 +46,7 @@
     visibility: visible;
     opacity: 1;
     max-height: 1200px;
-    transition: max-height 0.9s ease-in;
+    transition: 0.9s ease-in;
   
   
   } 
@@ -61,10 +61,10 @@
 
 .fa-arrow-down {
 	height: 1.25rem;
-    transition: .3s;
+  transition: .3s ease-in-out;
 }
 
 
 .fa-arrow-down.rotated{
     transform: rotate(180deg);
-  }
+}

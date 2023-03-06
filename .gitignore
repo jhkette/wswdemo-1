@@ -8,7 +8,9 @@ wp-content/*
 !wp-content/mu-plugins/
 !wp-content/plugins/
 !wp-content/themes/
-
+wp-content/cache/
+wp-content/plugins/wp-super-cache
+wp-content/plugins/query-monitor
 # ignore all mu-plugins, plugins, and themes
 # unless explicitly whitelisted at the end of this file
 wp-content/themes/*

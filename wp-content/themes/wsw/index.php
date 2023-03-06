@@ -33,7 +33,7 @@
          
             </article>
             <?php
-          	}
+          	} 
           } ?>
         
             <div><p>  <?php echo paginate_links(); ?> <p></div> 
