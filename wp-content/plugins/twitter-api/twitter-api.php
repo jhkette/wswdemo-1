@@ -30,8 +30,9 @@
         ),
     ); 
     // initialise empty string variable
-    $string="";
+    
     try{
+        $string="";
         // get rsult from api with url and args as arguments
         $result = wp_remote_get( $remote_url, $args );
         // get the body of data
@@ -54,9 +55,9 @@
         // return the string value
         return $string;
     }
-    catch (\Throwable $th) {
+    catch (Exception $e) {
         // return error mesage
-        return $string .= "There was a problem reaching the Twitterr API";
+        return $string .= "There was a problem reaching the Twitterr API" . $e->getMessage();
 
     }
 }

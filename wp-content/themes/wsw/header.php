@@ -38,7 +38,13 @@
         </nav>
       </div>
       <header class="lead-header" role="banner">
-      <a href="<?php echo esc_url(site_url('/')); ?>"><nav id="logo"></nav></a>
+      <nav id="logo">  <a href="<?php echo esc_url(site_url('/')); ?>"><img
+                src=<?php echo get_theme_file_uri(
+                    "/assets/images/WSW_siteLogo870.png"
+                ); ?>
+                
+                alt="logo"
+              /></a></nav>
         <div>
           <nav class="main-nav" role="navigation">
             <ul>

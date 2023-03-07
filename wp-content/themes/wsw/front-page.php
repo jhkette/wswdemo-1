@@ -5,12 +5,19 @@
 <div class="carousel">
 
   <?php 
-      // these variables come from advanced custom field images called carousel, carousel1 etc
-      // they can only be uploaded on the home page
+      // these variables come from advanced custom field plugin images. They are called 
+      // carousel, carousel2, carousel3 etc.
+      // they can only be uploaded on the home page.
       $image1 = get_field("carousel"); 
       $image2 = get_field("carousel2"); 
       $image3 = get_field("carousel3"); 
-      $image4 = get_field("carousel4"); ?>
+      $image4 = get_field("carousel4"); 
+      // error handling - the admin needs to add images if they are not present
+      if(!$image1 and !$image2 and !$image3 and !$image3 and !$image4){
+        echo("<p>Please add carousel images on the home page</p>");
+      }
+      ?>
+      
      <!-- here i am adding some conditional checks to only display image field if it present and uploaded -->
      <?php  if($image1) {?> <div class="carousel-cell" style="background-image:url('<?php echo $image1[
           "url"
@@ -21,7 +28,7 @@
       <?php  if($image3) {?>  <div class="carousel-cell" style="background-image:url('<?php echo $image3[
           "url"
       ]; ?>')"><h1><?php echo $image3["caption"]; ?></h1></div><?php };?>
-        <?php  if($image4) {?>  <div class="carousel-cell" style="background-image:url('<?php echo $image4[
+        <?php  if($image4){?>  <div class="carousel-cell" style="background-image:url('<?php echo $image4[
           "url"
       ]; ?>')"><h1><?php echo $image4["caption"]; ?></h1></div><?php };?>
     </div>
@@ -29,14 +36,13 @@
       <div class="lead">
         <section class="container-club">
           <h2>The Club</h2>
-          <?php if (have_posts()):
-              while (have_posts()):
+          <!-- display home page text content -->
+          <?php if (have_posts()){
+              while (have_posts()){
                   the_post();
                   the_content();
-              endwhile;
-
- 
-              endif; ?>
+                }
+              } ?>
       
           <div class="button-container">
             <a href="#" class="join">Join now!</a>
@@ -96,6 +102,7 @@
         <section class="container-news">
           <h2>Latest News</h2>
          <?php
+         // only show first three posts on news section 
          $homepagePosts = new WP_Query(["posts_per_page" => 3]);
          if (have_posts()) {
              while ($homepagePosts->have_posts()) {
@@ -133,8 +140,8 @@
       <div class="container-third">
         <section class="container-calender">
          
-         
             <h2>Calender</h2>
+            <!-- call shortcode from google calender plugin -->
             <?php echo do_shortcode("[google_calender]"); ?>
             
         </section>

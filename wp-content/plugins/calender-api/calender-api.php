@@ -66,7 +66,7 @@ function format_date($date){
 function google_calender_func()
 {
     $date = gmdate("Y-m-d\TH:i:s\Z"); // current date in correct format for api call
-    $api = GOOGLE_API; // api key define in wp-config 
+    $api = GOOGLE_API; // api key defined in wp-config 
     $baseparams = "orderBy=startTime&singleEvents=true&timeMin=" . $date; //params for url
     $url =
         "https://www.googleapis.com/calendar/v3/calendars/joseph.ketterer@gmail.com/events?" .
@@ -75,11 +75,14 @@ function google_calender_func()
     try {
         $response = wp_remote_get($final_url);
         $body = wp_remote_retrieve_body($response);
-      
-        $events = json_decode($body, true);
-        $string = "";
 
-        if ($events["items"]){
+        $events = json_decode($body, true);
+        if(array_key_exists("error", $events)){
+            throw new Exception($events["error"]["message"]);
+        }
+        $string = "";
+       
+        if (count($events["items"]) > 0){
             $string .= "<ul>";
             $i = 0;
             foreach ($events["items"] as $event) {
@@ -101,8 +104,8 @@ function google_calender_func()
         return $string .= "There are no events scheduled at the moment";
     }
         
-    } catch (\Throwable $th) {
-        return $string .= "There was a problem reaching the Google Calender API";
+    } catch (Exception $e) {
+        return $e->getMessage();
     }
 }
 add_shortcode("google_calender", "google_calender_func");
