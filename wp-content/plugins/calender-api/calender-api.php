@@ -73,11 +73,14 @@ function google_calender_func()
         $baseparams; // url with base params
     $final_url = $url . "&key=" . $api; // final url to call 
     try {
+        // call api
         $response = wp_remote_get($final_url);
         $body = wp_remote_retrieve_body($response);
-
+        // decode json into php
         $events = json_decode($body, true);
+        // check for error key
         if(array_key_exists("error", $events)){
+            // throw error with message
             throw new Exception($events["error"]["message"]);
         }
         $string = "";
