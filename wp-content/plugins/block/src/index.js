@@ -4,6 +4,11 @@ import Save from './save';
 import './style.scss';
 
 registerBlockType('block/accordion', {
+	icon: {
+		src: 'arrow-down-alt2',
+		background: '#f03',
+		foreground: '#fff',
+	},
 	edit: Edit,
 	save: Save,
 	attributes: {

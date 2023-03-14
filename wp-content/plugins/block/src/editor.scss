@@ -1,12 +1,14 @@
 
 .question-answer{
     padding: .2rem 0;
+    width: 70%;
+    margin: auto;
   }
   
 
   .question-container {
     display: flex;
-    width: 80%;
+  
     flex-direction: row;
     justify-content: space-between;
     align-content: center;
@@ -20,22 +22,9 @@
 
 }
 
-.answer-container.visible{
-  visibility: visible;
-  max-height: 1200px;
-  transition: max-height 0.9s ease-in;
-} 
-
-
-.answer-container {
-  background-color: #f6cac98d;
-  border-bottom: 2px dotted var(--line);
-  padding: 1rem 1.35rem;
-  width: 90%;
-  visibility: hidden;
-
-  max-height: 0;
-  transition: max-height 0.9s ease-out;
+.question-response{
+  width: 97%;
+  margin: auto;
 }
 
 
@@ -48,7 +37,7 @@
 
 .fa-arrow-down {
 	height: 1.5rem;
-    transition: .3s;
+    transition: .2s;
 }
 
 

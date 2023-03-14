@@ -39,8 +39,9 @@
         $body = wp_remote_retrieve_body($result);
         // decode json format to php
         $items = json_decode($body, true);
-        print_r($items);
+        // if data array key doesn't exist an error has occurred
         if(!array_key_exists("data", $items)){
+            // throw error
             throw new Exception($items["detail"]);
         }
         else{

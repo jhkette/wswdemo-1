@@ -43,7 +43,7 @@ export default function Edit({ attributes, setAttributes }) {
 				placeholder={__('Your answer text', 'text-box')}
 				tagName="p"
 				allowedFormats={['core/bold']}
-				className="question heading"
+				className="question-response"
 				data={answerId}
 			/>
 		</article>
