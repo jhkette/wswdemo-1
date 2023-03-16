@@ -32,8 +32,7 @@ get_header(); ?>
               ?>
               
 
-            <h4 class="page-links__title"><a href="<?php echo esc_url(
-            	get_permalink($link)
+            <h4 class="page-links__title"><a href="<?php echo esc_url($link
             ); ?>"><?php echo esc_html($the_title); ?></a></h4>
                 <ul class="nav-links">
                 

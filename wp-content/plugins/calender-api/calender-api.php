@@ -7,11 +7,11 @@
  * @license GPL-2.0-or-later
  *
  * @wordpress-plugin
- * Plugin Name: Google Calender
- * Description: Gets information from the google calender api and outputs event as html list
+ * Plugin Name: Google Calender api plugin
+ * Description: Gets information from the google calender api and outputs event as html list with icons
  * Version: 0.0.1
  * Author: Joseph Ketterer
- * Author URI: https://mysite.com
+ * Author URI: https://jketterer.netlify.app/
  * License: GPL v2 or later
  * License URI: http://www.gnu.org/licenses/gpl-2.0.txt */
 

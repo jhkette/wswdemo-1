@@ -6,7 +6,7 @@ import './style.scss';
 registerBlockType('block/accordion', {
 	icon: {
 		src: 'arrow-down-alt2',
-		background: '#f03',
+		background: '#ce0000',
 		foreground: '#fff',
 	},
 	edit: Edit,
