@@ -3,8 +3,7 @@
 /**
  * Plugin Name: gutenberg accordion 
  *  Version: 1.0
- * Description: Accordion block for gutenberg. Please go to the settings button (the three dots) and ensure the 
- * 'Top toolbar' button is selected. This means that the toolbar won't interfere with the accordion.
+ * Description: Accordion block for gutenberg. Please go to the settings button (the three dots) and ensure the 'Top toolbar' button is selected. This means that the toolbar won't interfere with the accordion.
  * Author: Joseph Ketterer
  * Author URI: https://jketterer.netlify.app/
  */

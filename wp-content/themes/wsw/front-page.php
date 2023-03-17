@@ -23,25 +23,25 @@
      <?php  if($image1) {?> <div class="carousel-cell" style="background-image:url('<?php echo $image1[
           "url"
       ]; ?>')"><h1><?php echo $image1["caption"]; ?></h1> 
-    <?php  echo $image1["description"] ? '<h1 class="small">'.  $image1["description"].'</h1>': ''; ?>
+    <?php  echo $image1["description"] ? '<h1 class="title-small">'.  $image1["description"].'</h1>': ''; ?>
     </div><?php }?>; 
      
       <?php  if($image2) {?> <div class="carousel-cell" style="background-image:url('<?php echo $image2[
           "url"
       ]; ?>')"><h1><?php echo $image2["caption"]; ?></h1>
-       <?php  echo $image2["description"] ? '<h1 class="small">'.  $image2["description"].'</h1>': ''; ?>
+       <?php  echo $image2["description"] ? '<h1 class="title-small">'.  $image2["description"].'</h1>': ''; ?>
     </div><?php }?>; 
      
       <?php  if($image3) {?>  <div class="carousel-cell" style="background-image:url('<?php echo $image3[
           "url"
       ]; ?>')"><h1><?php echo $image3["caption"]; ?></h1>
-       <?php  echo $image3["description"] ?'<h1 class="small">'.  $image3["description"].'</h1>': ''; ?>
+       <?php  echo $image3["description"] ?'<h1 class="title-small">'.  $image3["description"].'</h1>': ''; ?>
     </div><?php }?>; 
 
         <?php  if($image4){?>  <div class="carousel-cell" style="background-image:url('<?php echo $image4[
           "url"
       ]; ?>')"><h1><?php echo $image4["caption"]; ?></h1>
-       <?php  echo $image1["description"] ? '<h1 class="small">'.  $image4["description"].'</h1>': ''; ?>
+       <?php  echo $image1["description"] ? '<h1 class="title-small">'.  $image4["description"].'</h1>': ''; ?>
     </div><?php }?>; 
      
     </div>

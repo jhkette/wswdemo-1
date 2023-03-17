@@ -104,7 +104,7 @@ function google_calender_func()
         
         return $string;
     }else{
-        return $string .= "There are no events scheduled at the moment";
+        return $string .= "<p>There are no events scheduled at the moment</p>";
     }
         
     } catch (Exception $e) {

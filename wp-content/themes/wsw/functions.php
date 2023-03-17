@@ -37,7 +37,7 @@ function wsw_files()
 	);
 	wp_enqueue_style(
 		'wsw_main',
-		get_template_directory_uri() . '/assets/css/main.css'
+		get_template_directory_uri() . '/assets/css/main.css', ['icons']
 	);
 }
 
@@ -47,6 +47,7 @@ add_action('wp_enqueue_scripts', 'wsw_files');
 // add title tags to pages
 function wsw_features()
 {
+	register_nav_menu('headerMenu', 'header menu');
 	add_theme_support('title-tag');
 }
 
