@@ -58,7 +58,9 @@
               } ?>
       
           <div class="button-container">
-            <a href="#" class="join">Join now!</a>
+            <a href="<?php echo esc_url(
+            	site_url('/join')
+            ); ?>" class="join">Join now!</a>
           </div>
         
         </section>

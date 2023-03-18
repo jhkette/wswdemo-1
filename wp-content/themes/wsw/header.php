@@ -8,19 +8,12 @@
 </head>
 <body>
     <nav class="mobile-nav" id="mobile-nav" >
-      <ul>
-        <li><a href="<?php echo esc_url(site_url('/')); ?>">Home</a></li>
-        <li><a href="<?php echo esc_url(
-        	site_url('/activities')
-        ); ?>">Activities</a></li>
-        <li><a href="<?php echo esc_url(
-        	site_url('/events')
-        ); ?>">Events</a></li>
-        <li><a href="<?php echo esc_url(site_url('/news')); ?>">News</a></li>
-        <li><a href="<?php echo esc_url(
-        	site_url('/information')
-        ); ?>">Info</a></li>
-      </ul>
+    <?php
+         wp_nav_menu(array(
+          'theme_location' => 'headerMenu'
+         ))
+         
+         ?>
     </nav>
 
     <div id="header-container">
@@ -47,19 +40,12 @@
               /></a></nav>
         <div>
           <nav class="main-nav" role="navigation">
-            <ul>
-            <li><a href="<?php echo esc_url(site_url('/')); ?>">Home</a></li>
-        <li><a href="<?php echo esc_url(
-        	site_url('/activities')
-        ); ?>">Activities</a></li>
-        <li><a href="<?php echo esc_url(
-        	site_url('/events')
-        ); ?>">Events</a></li>
-        <li><a href="<?php echo esc_url(site_url('/news')); ?>">News</a></li>
-        <li><a href="<?php echo esc_url(
-        	site_url('/information')
-        ); ?>">Info</a></li>
-            </ul>
+         <?php
+         wp_nav_menu(array(
+          'theme_location' => 'headerMenu'
+         ))
+         
+         ?>
           </nav>
         </div>
         <div id="nav-icon1" role="navigation">

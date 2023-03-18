@@ -7,7 +7,7 @@
               <article class="post-item">
                 <h2 class="headline"><a href="<?php esc_url(
                 	the_permalink()
-                ); ?>"><?php the_title(); ?></a></h2>
+                ); ?>"><?php echo esc_html__(the_title()); ?></a></h2>
                 
                 <div>
                   <p class="highlight-link">Posted by <span class="blog-category"><?php esc_url(

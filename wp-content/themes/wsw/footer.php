@@ -4,9 +4,15 @@
             <nav class="footer" role="navigation">
             <h3>Information</h3>
               <ul>
-                <li><a href="#">Calender</a></li>
-                <li><a href="#">Contact</a></li>
-                <li><a href="#">Join Us</a></li>
+                <li><a href="<?php echo esc_url(
+        	site_url('/calender')
+        ); ?>">Calender</a></li>
+                <li><a href="<?php echo esc_url(
+        	site_url('/contact')
+        ); ?>">Contact</a></li>
+                <li><a href="<?php echo esc_url(
+        	site_url('/join')
+        ); ?>">Join Us</a></li>
               </ul>
             </nav>
           </div>
@@ -27,3 +33,4 @@
       <?php wp_footer(); ?>
   </body>
 </html>
+
