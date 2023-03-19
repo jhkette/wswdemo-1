@@ -23,7 +23,7 @@ while (have_posts()) {
         <p class="highlight-link"><a href="<?php echo site_url(
         	'/news'
         ); ?>"><i class="fa fa-home" aria-hidden="true"></i> Blog Home</a></p> 
-         <h2><?php echo esc_html__(the_title()); ?></h2>
+         <h2 class="blog-title"><?php echo esc_html__(the_title()); ?></h2>
         <p>Posted by <span class="blog-category"><?php the_author_posts_link(); ?></span> on <?php the_time(
 	'n.j.y'
 ); ?> in <span class="blog-category"><?php echo get_the_category_list(
