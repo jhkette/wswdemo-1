@@ -24,7 +24,7 @@ wp-content/plugins/index.php
 
 # ignore node dependency directories (used by grunt)
 node_modules/
-
+vendor/
 # ignore OS generated files
 ehthumbs.db
 Thumbs.db

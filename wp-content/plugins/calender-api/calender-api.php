@@ -78,11 +78,12 @@ function google_calender_func()
         $body = wp_remote_retrieve_body($response);
         // decode json into php
         $events = json_decode($body, true);
-        // check for error key
+        // check for error key in php associative array
         if(array_key_exists("error", $events)){
-            // throw error with message
+            // throw error with message if there is an error key
             throw new Exception($events["error"]["message"]);
         }
+        // initalise string variable
         $string = "";
        
         if (count($events["items"]) > 0){

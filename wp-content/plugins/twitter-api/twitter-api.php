@@ -47,8 +47,8 @@
         else{
             // get the url for image profile alongside tweet
             $user_url = $items["includes"]["users"][0]["profile_image_url"];
+            // intialise counter - as I only want to show 4 tweets
             $i = 0;
-
             // loop through each tweet
             foreach($items["data"] as $item){
                 // if more than 4 break from loop
@@ -68,6 +68,8 @@
 
     }
 }
+// add shortcode -  a wordpress inbuilt function that will now display what is
+// return from this function when [twiiter call] is added to the theme.
  add_shortcode("twitter", "twitter_call");
 
 

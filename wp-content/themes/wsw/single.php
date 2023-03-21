@@ -13,7 +13,7 @@ while (have_posts()) {
         </div>
 </div>  
     </div>
-   <div class ="lead singlecontainer">
+   <div class ="lead singlecontainer news">
     <div class="post-item">
         <?php if (has_post_thumbnail()) {
         	the_post_thumbnail();

@@ -13,8 +13,8 @@ export default function Edit({ attributes, setAttributes }) {
 
 	useEffect(() => {
 		setAttributes({
-			arrowId: uuidv4(),
-			answerId: uuidv4(),
+			arrowId: uuidv4().replace(/-/g, ''),
+			answerId: uuidv4().replace(/-/g, ''),
 		});
 	}, [setAttributes]);
 
