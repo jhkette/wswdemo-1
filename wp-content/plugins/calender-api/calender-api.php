@@ -63,8 +63,8 @@ function format_date($date){
     return (int)$day . $ending;
  }
 
-function google_calender_func()
-{
+function google_calender_func(){
+    
     $date = gmdate("Y-m-d\TH:i:s\Z"); // current date in correct format for api call
     $api = GOOGLE_API; // api key defined in wp-config 
     $baseparams = "orderBy=startTime&singleEvents=true&timeMin=" . $date; //params for url
@@ -103,10 +103,10 @@ function google_calender_func()
             $string .= "</ul>";
 
         
-        return $string;
-    }else{
-        return $string .= "<p>There are no events scheduled at the moment</p>";
-    }
+            return $string;
+        }else{
+            return $string .= "<p>There are no events scheduled at the moment</p>";
+        }
         
     } catch (Exception $e) {
         return $e->getMessage();

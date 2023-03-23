@@ -8,12 +8,9 @@
 </head>
 <body>
     <nav class="mobile-nav" id="mobile-nav" >
-    <?php
-         wp_nav_menu(array(
-          'theme_location' => 'headerMenu'
-         ))
-         
-         ?>
+    <?php wp_nav_menu([
+    	'theme_location' => 'headerMenu',
+    ]); ?>
     </nav>
 
     <div id="header-container">
@@ -33,19 +30,16 @@
       <header class="lead-header" role="banner">
       <nav id="logo">  <a href="<?php echo esc_url(site_url('/')); ?>"><img
                 src=<?php echo get_theme_file_uri(
-                    "/assets/images/WSW_siteLogo870.png"
+                	'/assets/images/WSW_siteLogo870.png'
                 ); ?>
                 
                 alt="logo"
               /></a></nav>
         <div>
           <nav class="main-nav" role="navigation">
-         <?php
-         wp_nav_menu(array(
-          'theme_location' => 'headerMenu'
-         ))
-         
-         ?>
+         <?php wp_nav_menu([
+         	'theme_location' => 'headerMenu',
+         ]); ?>
           </nav>
         </div>
         <div id="nav-icon1" role="navigation">

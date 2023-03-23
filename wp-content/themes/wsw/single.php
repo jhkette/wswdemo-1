@@ -14,7 +14,7 @@ while (have_posts()) {
 </div>  
     </div>
    <div class ="lead singlecontainer news">
-    <div class="post-item">
+    <article class="post-item">
         <?php if (has_post_thumbnail()) {
         	the_post_thumbnail();
         } ?>
@@ -33,7 +33,7 @@ while (have_posts()) {
 
       <div class="generic-content"><?php esc_html__(the_content()); ?></div>
 
-</div>
+</article>
 </div>
     
 

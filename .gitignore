@@ -86,3 +86,4 @@ wp-content/plugins/hello.php
 !wp-content/themes/plugins/calender-api/
 !wp-content/themes/plugins/twitter-api/
 !wp-content/themes/plugins/accordion-block/
+!cypress

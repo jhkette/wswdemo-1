@@ -32,13 +32,15 @@ get_header(); ?>
               ?>
               
 
-            <h4 class="page-links__title"><a href="<?php echo esc_url($link
+            <h4 class="page-links__title"><a href="<?php echo esc_url(
+            	$link
             ); ?>"><?php echo esc_html($the_title); ?></a></h4>
                 <ul class="nav-links">
                 
               
                 <?php // wordpress wp_list_pages function with an array parameter
-                // no title_li stops a title appearing on the list
+
+// no title_li stops a title appearing on the list
                 // only want pages that are child of a certain page - ie
                 wp_list_pages([
                 	'title_li' => null,

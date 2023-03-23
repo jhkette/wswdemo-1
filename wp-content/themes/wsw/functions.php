@@ -1,8 +1,8 @@
 <?php
 
-/* enqueue all the nessesary scripts/css files to load site 
-**
-*/
+/* enqueue all the nessesary scripts/css files to load site
+ **
+ */
 function wsw_files()
 {
 	wp_enqueue_script(
@@ -37,7 +37,8 @@ function wsw_files()
 	);
 	wp_enqueue_style(
 		'wsw_main',
-		get_template_directory_uri() . '/assets/css/main.css', ['icons']
+		get_template_directory_uri() . '/assets/css/main.css',
+		['icons']
 	);
 }
 
