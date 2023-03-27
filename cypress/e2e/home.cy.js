@@ -1,20 +1,21 @@
-describe('template spec', () => {
+describe('user journeys', () => {
 
   beforeEach(() => {
     cy.visit('http://mysite.test/')
   })
+
+
   it('passes', () => {
-   
     cy.get('h1')
     .should('exist')
   })
+
   it('a user journey to cyclocross events', () => {
     cy.viewport(1200, 1000)
     cy.get('#menu-main-menu-1').contains('Events').click()
     cy.url().should('include', '/events')
     cy.get('.nav-links').contains('CycloCross').click()
     cy.url().should('include', '/cyclocross')
-    
   })
 
   it('a user journey to actvities then triathlon', () => {

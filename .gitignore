@@ -64,7 +64,7 @@ wp-content/plugins/advanced-custom-fields
 wp-content/plugins/akismet
 wp-content/plugins/events-calendar-for-google
 wp-content/plugins/hello.php
-
+cypress.env.json
 
 # -------------------------
 # BEGIN Whitelisted Files
