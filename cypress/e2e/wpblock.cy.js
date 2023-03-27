@@ -18,7 +18,8 @@ describe('template spec', () => {
 
       it('click on second accordion reveal answer', () => {
         cy.viewport(1200, 1000)
-        cy.get('.question-answer').eq(1).children('.answer-container') 
+        cy.get('.question-answer').eq(1)
+        .children('.answer-container') 
         .should('have.css', 'max-height', '0px')
         cy.get('.question-answer').eq(1).click()
         .children('.answer-container')
@@ -26,6 +27,4 @@ describe('template spec', () => {
         .should('have.css', 'opacity', '1')
         .should('have.css', 'max-height', '1200px')    
       })
-
-
 })
