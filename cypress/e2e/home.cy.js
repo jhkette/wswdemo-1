@@ -1,3 +1,5 @@
+import 'cypress-axe'
+
 describe('user journeys', () => {
 
   beforeEach(() => {
@@ -9,6 +11,24 @@ describe('user journeys', () => {
     cy.get('h1')
     .should('exist')
   })
+
+  it('should be accessible', () => {
+    cy.injectAxe()
+    cy.checkA11y()
+  })
+  
+  it('cy.document() - get the document object', () => {
+    // https://on.cypress.io/document
+    cy.document().should('have.property', 'charset').and('eq', 'UTF-8')
+  })
+
+  it('cy.document() - get the document object', () => {
+    // https://on.cypress.io/document
+    cy.document().should('have.property', 'title')
+    cy.visit('http://mysite.test/activities/')
+    cy.document().should('have.property', 'title')
+  })
+
 
   it('a user journey to cyclocross events', () => {
     cy.viewport(1200, 1000)
@@ -39,6 +59,4 @@ describe('user journeys', () => {
     cy.get('#mobile-nav').contains('News').click()
     cy.url().should('include', '/news')  
   })
-
-
 })

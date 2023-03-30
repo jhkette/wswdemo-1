@@ -18,3 +18,22 @@ it('should be able to login', () => {
     cy.get('#wp-submit').click()
     cy.url().should('include', '/wp-admin')  
 })
+
+
+// it('should be able to logout', () => {
+//     cy.viewport(1200, 1000)
+//     cy.visit('http://mysite.test/wp-admin')
+//     cy.wait(500)
+//     cy.get('#user_login').click()
+    
+//     .type('jkette01', { delay: 100 })
+//     .should('have.value', 'jkette01')
+//     cy.get('#user_pass').click()
+//     .type('guesswho', { delay: 100 })
+//     .should('have.value', 'guesswho')
+//     cy.get('#wp-submit').click()
+//     cy.wait(500)
+//     cy.get('#wp-admin-bar-my-account').trigger('mouseover')
+//     cy.get('.wp-admin-bar-logout').click()
+   
+// })
