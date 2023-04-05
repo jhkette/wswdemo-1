@@ -15,17 +15,15 @@
  * License: GPL v2 or later
  * License URI: http://www.gnu.org/licenses/gpl-2.0.txt */
 
+// function that formats date to a human readable form
 function format_date($date){
-     
-    $date_pieces =explode("-", $date);
-    $month = get_month((int)($date_pieces[1] -1));
-    $day = day_ending($date_pieces[2]);
+    $date_pieces =explode("-", $date); // explode date
+    $month = get_month((int)($date_pieces[1] -1)); // call get month function
+    $day = day_ending($date_pieces[2]); // get day ending
     $year = $date_pieces[0];
-
-    //  $month = getMonth(int($split_date[1]) - 1);
     return $day." ".$month." ".$year;
   };
-  
+  // returns month with a month number as paramater
   function get_month($month){
    $final_month = [
       "January",
@@ -43,7 +41,7 @@ function format_date($date){
    ];
     return  $final_month[$month];
   }
-
+// return day ending based on day of the month
  function day_ending($day){
     $ending  = '';
     switch($day[1]){
@@ -86,28 +84,26 @@ function google_calender_func(){
         // initalise string variable
         $string = "";
        
-        if (count($events["items"]) > 0){
-            $string .= "<ul>";
-            $i = 0;
-            foreach ($events["items"] as $event) {
+        if (count($events["items"]) > 0){ // check there are events - otherwise else block runs
+            $string .= "<ul>"; // initialise a list
+            $i = 0; // initialise counter
+            foreach ($events["items"] as $event) { // start the loop through the events
               
-                if( $i >= 4) break;
-                    $string .= "<li> <a href='".esc_url($event["htmlLink"])."'><h3>".esc_html__($event["summary"])."</h3></a>";
+                if( $i >= 4) break; // break if the counter >= 4
+                    // add event info to string
+                    $string .= "<li> <a href='".esc_url($event["htmlLink"])."'><h3>".esc_html__($event["summary"])."</h3></a>"; 
                     $string .= "<p>".esc_html__($event["description"]). "</p>";
                     $date = explode("T", $event["start"]["dateTime"]);
                     $final_date = format_date($date[0]);
                     $string .= "<p>".esc_html__($final_date). "</p> </li>";
                 
-                $i++;
+                $i++; // increment counter
             }
             $string .= "</ul>";
-
-        
             return $string;
         }else{
-            return $string .= "<p>There are no events scheduled at the moment</p>";
-        }
-        
+            return $string .= "<p>There are no events scheduled at the moment</p>"; // if there are no events
+        }     
     } catch (Exception $e) {
         return $e->getMessage();
     }
