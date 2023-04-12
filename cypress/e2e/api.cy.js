@@ -29,7 +29,6 @@ describe('Google analytics api test', () => {
 			cy.get('.container-calender').should('contain.text', description);
 		});
 	});
-
 });
 
 describe('Twitter api tests', () => {

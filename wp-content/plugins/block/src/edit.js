@@ -1,6 +1,6 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import { __ } from '@wordpress/i18n';
 import { useBlockProps, RichText } from '@wordpress/block-editor';
-
 import { faArrowDown } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { v4 as uuidv4 } from 'uuid';
@@ -9,14 +9,15 @@ import './editor.scss';
 
 export default function Edit({ attributes, setAttributes }) {
 	// destructure attributes of the block which are defined in index.js
-	const { question, answer, answerId, arrowId } = attributes;
-
+	const { question, answer, answerId, arrowId } = attributes; // destructure attributes of the wp-block
+	//  useffect is a React hook ( a function) that runs when the component is rendered
+	// here I am using to give the arrowId and answerID a unique id - using the uuid  package. i'm removing hyphens from id.
 	useEffect(() => {
 		setAttributes({
 			arrowId: uuidv4().replace(/-/g, ''),
 			answerId: uuidv4().replace(/-/g, ''),
 		});
-	}, [setAttributes]);
+	}, []);
 
 	return (
 		<article className="question-answer">
