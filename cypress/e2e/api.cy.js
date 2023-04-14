@@ -4,7 +4,7 @@ const ID_TOKEN = Cypress.env('ID_TOKEN')
 const ID = Cypress.env('ID') 
 const BASEPARAMS = `orderBy=startTime&singleEvents=true&timeMin=${new Date().toISOString()}`;
 const BASEURL = `https://www.googleapis.com/calendar/v3/calendars/${CAL_ID}/events?${BASEPARAMS}`;
-
+// tokens and api details from env.json files
 
 const finalURL = `${BASEURL}&key=${CAL_API}`;
 
