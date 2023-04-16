@@ -1,7 +1,13 @@
+
+
+// user hourneys on different viewports
+// these tests change the screen to different
+// viewport sizes then check to see if appropriate content
+// appears. 
 describe('user journeys', () => {
 
     beforeEach(() => {
-      cy.visit('http://mysite.test/')
+      cy.visit('https://titan.dcs.bbk.ac.uk/~jkette01/wswdemo/')
     })
 
     it('iphone-7', () => {

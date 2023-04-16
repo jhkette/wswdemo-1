@@ -28,6 +28,7 @@ vendor/
 # ignore OS generated files
 ehthumbs.db
 Thumbs.db
+cypress/e2e/login.cy.js
 
 # ignore Editor files
 *.sublime-project

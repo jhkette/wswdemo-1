@@ -2,7 +2,7 @@ import 'cypress-axe';
 
 describe('user journeys', () => {
 	beforeEach(() => {
-		cy.visit('http://mysite.test/');
+		cy.visit('https://titan.dcs.bbk.ac.uk/~jkette01/wswdemo/');
 	});
 
 	it('cy.document() - get the document object', () => {
@@ -13,7 +13,7 @@ describe('user journeys', () => {
 	it('cy.document() - get the document object', () => {
 		// https://on.cypress.io/document
 		cy.document().should('have.property', 'title');
-		cy.visit('http://mysite.test/activities/');
+		cy.visit('https://titan.dcs.bbk.ac.uk/~jkette01/wswdemo/activities/');
 		cy.document().should('have.property', 'title');
 	});
 
