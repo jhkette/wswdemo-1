@@ -5,7 +5,7 @@ import './style.scss';
 
 registerBlockType('block/accordion', {
 	icon: {
-		src: 'arrow-down-alt2',
+		src: 'dashicons-admin-appearance',
 		background: '#ce0000',
 		foreground: '#fff',
 	},

@@ -20,7 +20,7 @@ export default function Edit({ attributes, setAttributes }) {
 	}, []);
 
 	return (
-		<article className="question-answer">
+		<article className="question-answer-edit">
 			<div className="question-container">
 				<RichText
 					{...useBlockProps()}

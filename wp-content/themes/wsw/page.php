@@ -54,7 +54,7 @@ get_header(); ?>
          
             <?php esc_html(the_content()); ?>
         <!-- if there is no parent page found ie the page is the parent -->
-         <?php if (!$the_parent) { ?>
+         <?php if (!$the_parent and  get_the_title($the_parent) != 'Information') { ?>
            <div class="container-events">
              <!-- show childpages from shortcode - this is from custom-shortcode.php -->
             <?php echo do_shortcode('[show_childpages]'); ?>
