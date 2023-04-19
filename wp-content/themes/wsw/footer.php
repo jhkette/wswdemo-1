@@ -21,9 +21,9 @@
             <nav class="footer" role="navigation">
             <h3>Social</h3>
               <ul>
-                <li><a href="#">Twitter</a></li>
-                <li><a href="#">Strava</a></li>
-                <li><a href="#">Facebook</a></li>
+                <li><a href="https://twitter.com/wswtri?lang=en-GB">Twitter</a></li>
+                <li><a href="https://www.strava.com/clubs/4325">Strava</a></li>
+                <li><a href="https://www.facebook.com/groups/2435915831/?locale=en_GB">Facebook</a></li>
               </ul>
             </nav>
           </div>
