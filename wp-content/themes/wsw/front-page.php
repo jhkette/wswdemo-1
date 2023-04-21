@@ -69,7 +69,7 @@ if (!$image1 and !$image2 and !$image3 and !$image3 and !$image4) {
           <div class="button-container">
             <a href="<?php echo esc_url(
             	site_url('/join')
-            ); ?>" class="join">Join now!</a>
+            ); ?>" id="join">Join now!</a>
           </div>
         
         </section>

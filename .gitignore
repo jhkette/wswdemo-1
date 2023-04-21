@@ -68,7 +68,7 @@ wp-content/plugins/limit-login-attempts-reloaded
 wp-content/plugins/events-calendar-for-google
 wp-content/plugins/hello.php
 cypress.env.json
-
+aios-bootstrap.php
 # -------------------------
 # BEGIN Whitelisted Files
 # -------------------------
@@ -88,5 +88,6 @@ cypress.env.json
 !wp-content/themes/wsw/
 !wp-content/themes/plugins/calender-api/
 !wp-content/themes/plugins/twitter-api/
-!wp-content/themes/plugins/accordion-block/
+!wp-content/themes/plugins/block/
+!wp-content/themes/plugins/redline/
 !cypress

@@ -23,7 +23,8 @@
             <li><a href="<?php echo esc_url(
             	site_url('/calender')
             ); ?>">Calender</a></li>
-            <li>Contact</li>
+            <li><a href="<?php echo esc_url(
+            	site_url('/contact'));?>">Contact</a></li>
           </ul>
         </nav>
       </div>
