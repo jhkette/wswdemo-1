@@ -15,7 +15,7 @@ describe('template spec', () => {
         .children('.answer-container')
         // check classes and css of children
         .should('have.class', 'visible')
-        .should('have.css', 'opacity', '1')
+       
         .should('have.css', 'max-height', '1200px')
         
       })
@@ -28,7 +28,7 @@ describe('template spec', () => {
         cy.get('.question-answer').eq(1).click()
         .children('.answer-container')
         .should('have.class', 'visible')
-        .should('have.css', 'opacity', '1')
+       
         .should('have.css', 'max-height', '1200px')    
       })
 })

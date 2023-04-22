@@ -50,7 +50,7 @@ describe('Twitter api tests', () => {
 			expect(response.body.data).to.have.property('length')
 		});
 	});
-	it('gets a list of users', () => {
+	it('checks tweets is in container on the website', () => {
 		cy.get('@details').then((response) => {
 			const text = response.body.data[0]['text'];
 			cy.visit('https://titan.dcs.bbk.ac.uk/~jkette01/wswdemo/');

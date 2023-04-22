@@ -2,6 +2,7 @@ beforeEach(()=> {
     cy.visit('http://mysite.test/')
 })
 
+// nb these tests run against a local site - password is for local site obviously 
 // login test - goes to login - types in credentials
 it('should be able to login', () => {
     // viewport size
