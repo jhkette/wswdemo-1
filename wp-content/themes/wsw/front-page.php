@@ -13,7 +13,7 @@ if (!$image1 and !$image2 and !$image3 and !$image3 and !$image4) {
 
 
 
-<div class="carousel">      
+  <div class="carousel">      
      <!-- here i am adding some conditional checks to only display image field if it present and uploaded -->
      <?php if ($image1) { 
         ?> <div class="carousel-cell" style="background-image:url('<?php echo esc_url($image1["url"]); ?>')"><h1>
