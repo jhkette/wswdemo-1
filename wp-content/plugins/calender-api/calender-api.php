@@ -92,9 +92,15 @@ function google_calender_func(){
                 if( $i >= 4) break; // break if the counter >= 4
                     // add event info to string
                     $string .= "<li> <a href='".esc_url($event["htmlLink"])."'><h3>".esc_html__($event["summary"])."</h3></a>"; 
-                    $string .= "<p>".esc_html__($event["description"]). "</p>";
-                    $date = explode("T", $event["start"]["dateTime"]);
-                    $final_date = format_date($date[0]);
+                    if(array_key_exists("description",  $event)){
+                        $string .= "<p>".esc_html__($event["description"]). "</p>";
+                    }   
+                    if(array_key_exists("dateTime",  $event["start"])) {
+                        $date = explode("T", $event["start"]["dateTime"]);
+                        $final_date = format_date($date[0]);
+                    }else{
+                        $final_date = format_date($event["start"]["date"]);
+                    }
                     $string .= "<p>".esc_html__($final_date). "</p> </li>";
                 
                 $i++; // increment counter
