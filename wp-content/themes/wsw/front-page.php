@@ -160,9 +160,9 @@ if (!$image1 and !$image2 and !$image3 and !$image3 and !$image4) {
           <section class="container-images">
             <div class="image-container">
               <div class="imagelink">
-                <a href="<?php echo site_url(
+                <a href="<?php echo esc_url(site_url(
                     "/activities"
-                ); ?>"  aria-label="activities">
+                )); ?>"  aria-label="activities">
                   <div class="authorimage one"></div>
                 </a>
               </div>
@@ -170,7 +170,7 @@ if (!$image1 and !$image2 and !$image3 and !$image3 and !$image4) {
             </div>
             <div class="image-container">
               <div class="imagelink">
-                <a href="<?php echo site_url("/events"); ?>"  aria-label="events">
+                <a href="<?php echo esc_url(site_url("/events")); ?>"  aria-label="events">
                   <div class="authorimage two"></div>
                 </a>
               </div>
@@ -182,9 +182,9 @@ if (!$image1 and !$image2 and !$image3 and !$image3 and !$image4) {
             <div class="image-container">
               <div class="imagelink">
                 <!-- cc licensed from https://www.flickr.com/photos/medmss/6882587043 -->
-                <a href="<?php echo site_url(
+                <a href="<?php echo esc_url(site_url(
                     "/information"
-                ); ?>" aria-label="information">
+                )); ?>" aria-label="information">
                   <div class="authorimage four" ></div>
                 </a>
               </div>
