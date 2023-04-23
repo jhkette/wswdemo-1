@@ -18,25 +18,25 @@ if (!$image1 and !$image2 and !$image3 and !$image3 and !$image4) {
      <?php if ($image1) { 
         ?> <div class="carousel-cell" style="background-image:url('<?php echo esc_url($image1["url"]); ?>')"><h1>
           <?php echo esc_html__($image1["caption"]); ?></h1> 
-           <?php echo $image1["description"] ? '<h1 class="title-small">' . esc_html__($image1["description"]) . "</h1>" : ""; ?>
+           <?php echo !empty($image1["description"]) ? '<h1 class="title-small">' . esc_html__($image1["description"]) . "</h1>" : ""; ?>
       </div><?php } ?>
      
       <?php if ($image2) { 
         ?> <div class="carousel-cell" style="background-image:url('<?php echo esc_url($image2["url"]); ?>')"><h1>
           <?php echo esc_html__($image2["caption"]); ?></h1>
-          <?php echo $image2["description"] ? '<h1 class="title-small">' . esc_html__($image2["description"]) . "</h1>" : ""; ?>
+          <?php echo !empty($image2["description"]) ? '<h1 class="title-small">' . esc_html__($image2["description"]) . "</h1>" : ""; ?>
         </div><?php } ?> 
      
       <?php if ($image3) { 
         ?>  <div class="carousel-cell" style="background-image:url('<?php echo esc_url($image3["url"]); ?>')"><h1>
           <?php echo esc_html__($image3["caption"]); ?></h1>
-          <?php echo $image3["description"] ? '<h1 class="title-small">' .esc_html__($image3["description"]) . "</h1>" : ""; ?>
+          <?php echo !empty($image3["description"]) ? '<h1 class="title-small">' .esc_html__($image3["description"]) . "</h1>" : ""; ?>
       </div><?php } ?>
 
         <?php if ($image4) { ?>  
           <div class="carousel-cell" style="background-image:url('<?php echo esc_url($image4["url"]); ?>')"><h1>
             <?php echo $image4["caption"]; ?></h1>
-            <?php echo $image1["description"] ? '<h1 class="title-small">' . esc_html__($image4["description"]) . "</h1>" : ""; ?>
+            <?php echo !empty($image4["description"]) ? '<h1 class="title-small">' . esc_html__($image4["description"]) . "</h1>" : ""; ?>
         </div><?php } ?>
       </div>
       <main class="main-body">
@@ -116,22 +116,22 @@ if (!$image1 and !$image2 and !$image3 and !$image3 and !$image4) {
           $homepagePosts = new WP_Query(["posts_per_page" => 3]);
           if (have_posts()) {
               while ($homepagePosts->have_posts()) {
-                  $homepagePosts->the_post(); ?>
-            <article class="feature-item">
-              <h3><?php esc_html__(the_title()); ?></h3>
-              <p> <?php echo esc_html__(
-                  wp_trim_words(get_the_content(), 25)
-              ); ?> </p>
-              <a href="<?php esc_url(the_permalink()); ?>" class="readmore"
-                >Read more
-                <div class="container-chevron" id="<?php echo esc_html__(
-                    get_the_ID()
-                ); ?>">
-                  <i class="fa-solid fa-chevron-right"></i
-                  ><i class="fa-solid fa-chevron-right"></i></div
-              ></a>
-            </article>
-            <?php
+                $homepagePosts->the_post(); ?>
+                  <article class="feature-item">
+                    <h3><?php esc_html__(the_title()); ?></h3>
+                    <p> <?php echo esc_html__(
+                        wp_trim_words(get_the_content(), 25)
+                    ); ?> </p>
+                    <a href="<?php esc_url(the_permalink()); ?>" class="readmore"
+                      >Read more
+                      <div class="container-chevron" id="<?php echo esc_html__(
+                          get_the_ID()
+                      ); ?>">
+                        <i class="fa-solid fa-chevron-right"></i
+                        ><i class="fa-solid fa-chevron-right"></i></div
+                    ></a>
+                  </article>
+                <?php
               }
               wp_reset_postdata();
           } else {

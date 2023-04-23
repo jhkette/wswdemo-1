@@ -36,7 +36,7 @@
                 
                 alt="logo"
               /></a></nav>
-        <div>
+         <div>
           <nav class="main-nav" role="navigation">
          <?php wp_nav_menu([
          	'theme_location' => 'headerMenu',
@@ -49,5 +49,5 @@
           <span></span>
         </div>
       </header>
-      </div>
+   </div>
    
