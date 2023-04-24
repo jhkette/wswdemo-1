@@ -89,23 +89,28 @@ function google_calender_func(){
             $i = 0; // initialise counter
             foreach ($events["items"] as $event) { // start the loop through the events
               
-                if( $i >= 4) break; // break if the counter >= 4
+                if( $i >= 4) break; // break if the counter >= 4 - we only want 4 events shown
                     // add event info to string
                     $string .= "<li> <a href='".esc_url($event["htmlLink"])."'><h3>".esc_html__($event["summary"])."</h3></a>"; 
                     if(array_key_exists("description",  $event)){
                         $string .= "<p>".esc_html__($event["description"]). "</p>";
-                    }   
+                    } 
+                    // there are two different type of date/time key sent by the api
+                    // depending on if event is all day or on a specific time - so these have to be checked
                     if(array_key_exists("dateTime",  $event["start"])) {
                         $date = explode("T", $event["start"]["dateTime"]);
                         $final_date = format_date($date[0]);
                     }else{
+                        // otherwise the api is sending an $event["start"]["date"] key - this also needs to be formatted
                         $final_date = format_date($event["start"]["date"]);
                     }
                     $string .= "<p>".esc_html__($final_date). "</p> </li>";
                 
                 $i++; // increment counter
             }
+            // close list
             $string .= "</ul>";
+            // return the entire string
             return $string;
         }else{
             return $string .= "<p>There are no events scheduled at the moment</p>"; // if there are no events
