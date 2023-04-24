@@ -13,7 +13,7 @@ import './editor.scss'
 
 function Edit( { attributes, setAttributes, noticeOperations, noticeUI } ) {
 	const { title, url, alt } = attributes;
-	// title to change function
+	// change title function
 	const changeTitle = ( newTitle ) => {
 		setAttributes( { title: newTitle } );
 	};
@@ -24,7 +24,7 @@ function Edit( { attributes, setAttributes, noticeOperations, noticeUI } ) {
 			setAttributes( { url: undefined, id: undefined, alt: '' } );
 			return;
 		}
-		// we se the url to the image.url and id to image id and alt to image.alt - these
+		// we set the url to the image.url and id to image id and alt to image.alt - these
 		// properties are on the image object when it is uploaded
 		setAttributes( { url: image.url, id: image.id, alt: image.alt } );
 	};
