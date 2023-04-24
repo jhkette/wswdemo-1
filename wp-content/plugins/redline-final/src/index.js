@@ -2,8 +2,7 @@ import { registerBlockType } from '@wordpress/blocks';
 import { __ } from '@wordpress/i18n';
 import Edit from './edit';
 import Save from './save';
-import './style.scss'
-
+import './style.scss';
 
 // https://github.com/alialaa/wp-blocks-course-team-members/tree/block-transforms
 // some inspiration for this block comes from the above github repository
@@ -16,7 +15,6 @@ registerBlockType( 'block/redlines', {
 		background: '#ce0000',
 		foreground: '#fff',
 	},
-	
 	supports: {
 		reusable: false,
 		html: false,
@@ -27,7 +25,6 @@ registerBlockType( 'block/redlines', {
 			source: 'html',
 			selector: 'h4',
 		},
-		
 		id: {
 			type: 'number',
 		},

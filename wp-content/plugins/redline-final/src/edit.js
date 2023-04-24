@@ -5,8 +5,9 @@ import {
 } from '@wordpress/block-editor';
 import { __ } from '@wordpress/i18n';
 import { isBlobURL } from '@wordpress/blob';
+// eslint-disable-next-line import/no-extraneous-dependencies
 import { Spinner, withNotices } from '@wordpress/components';
-import './editor.scss'
+import './editor.scss';
 
 // https://github.com/alialaa/wp-blocks-course-team-members/tree/block-transforms
 // some inspiration for this block comes from the above github repository
@@ -17,7 +18,7 @@ function Edit( { attributes, setAttributes, noticeOperations, noticeUI } ) {
 	const changeTitle = ( newTitle ) => {
 		setAttributes( { title: newTitle } );
 	};
-    // select image image 
+	// select image image
 	const selectImage = ( image ) => {
 		// if it isn't an image or image url set attributes to undefined.
 		if ( ! image || ! image.url ) {
@@ -44,7 +45,7 @@ function Edit( { attributes, setAttributes, noticeOperations, noticeUI } ) {
 		noticeOperations.createErrorNotice( message );
 	};
 	return (
-		<div { ...useBlockProps() } className='redline-container-edit'>
+		<div { ...useBlockProps() } className="redline-container-edit">
 			{ url && (
 				// when image is uploading we get a blob url -
 				// an image stored in the browser - in the process of uploading, so we can display
@@ -58,7 +59,7 @@ function Edit( { attributes, setAttributes, noticeOperations, noticeUI } ) {
 					{ isBlobURL( url ) && <Spinner /> }
 				</div>
 			) }
-			{/* media holder */}
+			{ /* media holder */ }
 			<MediaPlaceholder
 				icon="format-image"
 				onSelect={ selectImage }
@@ -69,7 +70,7 @@ function Edit( { attributes, setAttributes, noticeOperations, noticeUI } ) {
 				disableMediaButtons={ url }
 				notices={ noticeUI }
 			/>
-			{/* text holder for title of image */}
+			{ /* text holder for title of image */ }
 			<RichText
 				placeholder={ __( 'Title' ) }
 				tagName="h4"
@@ -77,7 +78,6 @@ function Edit( { attributes, setAttributes, noticeOperations, noticeUI } ) {
 				value={ title }
 				allowedFormats={ [] }
 			/>
-		
 		</div>
 	);
 }
