@@ -1,4 +1,4 @@
-describe('template spec', () => {
+describe('wp block tests', () => {
 
     beforeEach(() => {
       cy.visit('https://titan.dcs.bbk.ac.uk/~jkette01/wswdemo/praesent-a-nunc-eros/')
