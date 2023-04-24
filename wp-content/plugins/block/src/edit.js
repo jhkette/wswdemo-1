@@ -22,6 +22,7 @@ export default function Edit({ attributes, setAttributes }) {
 	return (
 		<article className="question-answer-edit">
 			<div className="question-container">
+				{/* richtext component for question value */}
 				<RichText
 					{...useBlockProps()}
 					onChange={(value) => setAttributes({ question: value })}
@@ -31,12 +32,14 @@ export default function Edit({ attributes, setAttributes }) {
 					allowedFormats={['core/bold']}
 					className="question heading"
 				/>
+				{/* arrow icon */}
 				<FontAwesomeIcon
 					icon={faArrowDown}
 					id={arrowId}
 					role="button"
 				/>
 			</div>
+			{/* richtext component for answer value */}
 			<RichText
 				{...useBlockProps()}
 				onChange={(value) => setAttributes({ answer: value })}
