@@ -10,7 +10,7 @@ const finalURL = `${BASEURL}&key=${CAL_API}`;
 
 // https://docs.cypress.io/guides/core-concepts/variables-and-aliases
 
-describe('Google analytics api test', () => {
+describe('Google calender api test', () => {
 	// here i save the url as an alias @google
 	beforeEach(() => {
 		cy.request('GET', finalURL).as('google');
