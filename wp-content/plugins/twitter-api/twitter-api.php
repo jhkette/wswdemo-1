@@ -16,6 +16,11 @@
  */
 
 
+  /**
+  * Function that calls twitter api and returns a html string
+  * @return string
+  */
+
  function twitter_call(){
     // id of twitter profile taken from wp-config file
     $id = TWITTER_ID;

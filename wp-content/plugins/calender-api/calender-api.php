@@ -15,7 +15,10 @@
  * License: GPL v2 or later
  * License URI: http://www.gnu.org/licenses/gpl-2.0.txt */
 
-// function that formats date to a human readable form
+ /**
+  * Function that returns string date
+  * @return string
+  */
 function format_date($date){
     $date_pieces =explode("-", $date); // explode date
     $month = get_month((int)($date_pieces[1] -1)); // call get month function
@@ -23,7 +26,10 @@ function format_date($date){
     $year = $date_pieces[0];
     return $day." ".$month." ".$year;
   };
-  // returns month with a month number as paramater
+ /**
+  * Function that returns string months
+  * @return string
+  */
   function get_month($month){
    $final_month = [
       "January",
@@ -41,7 +47,10 @@ function format_date($date){
    ];
     return  $final_month[$month];
   }
-// return day ending based on day of the month
+ /**
+  * Function that returns string of day ending
+  * @return string
+  */
  function day_ending($day){
     $ending  = '';
     switch($day[1]){
@@ -61,6 +70,10 @@ function format_date($date){
     return (int)$day . $ending;
  }
 
+ /**
+  * Function that calls google_calender that call api and returns ahtml string
+  * @return string
+  */
 function google_calender_func(){
     
     $date = gmdate("Y-m-d\TH:i:s\Z"); // current date in correct format for api call
