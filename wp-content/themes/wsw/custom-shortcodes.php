@@ -31,7 +31,11 @@ function show_childpages_shortcode()
 				"\">
            <div class=\"authorimage\" style=\"background-image: url('" .
 				$thumbnail_url .
-				"')\"></div></a></div><h3>" .
+				"')\">
+				<div class=\"viewmore small\">
+				<p>Find out more</p>
+			 	 </div>
+				</div></a></div><h3>" .
 				$title .
 				'</h3></div>';
 			$output .= $html;

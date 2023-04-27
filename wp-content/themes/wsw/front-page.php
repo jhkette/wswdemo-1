@@ -163,7 +163,11 @@ if (!$image1 and !$image2 and !$image3 and !$image3 and !$image4) {
                 <a href="<?php echo esc_url(site_url(
                     "/activities"
                 )); ?>"  aria-label="activities">
-                  <div class="authorimage one"></div>
+                  <div class="authorimage one">
+                    <div class="viewmore">
+                      <p>Find out more</p>
+                    </div>
+                  </div>
                 </a>
               </div>
               <h3 id="activities">Activities</h3>
@@ -171,7 +175,11 @@ if (!$image1 and !$image2 and !$image3 and !$image3 and !$image4) {
             <div class="image-container">
               <div class="imagelink">
                 <a href="<?php echo esc_url(site_url("/events")); ?>"  aria-label="events">
-                  <div class="authorimage two"></div>
+                  <div class="authorimage two">
+                    <div class="viewmore">
+                      <p>Find out more</p>
+                    </div>
+                  </div>
                 </a>
               </div>
               <h3 id="events">Events</h3>
@@ -185,7 +193,11 @@ if (!$image1 and !$image2 and !$image3 and !$image3 and !$image4) {
                 <a href="<?php echo esc_url(site_url(
                     "/information"
                 )); ?>" aria-label="information">
-                  <div class="authorimage four" ></div>
+                  <div class="authorimage four">
+                    <div class="viewmore">
+                      <p>Find out more</p>
+                    </div>
+                  </div>
                 </a>
               </div>
               <h3 id="information">Information</h3>
