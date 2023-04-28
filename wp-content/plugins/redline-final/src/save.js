@@ -1,5 +1,10 @@
 import { useBlockProps, RichText } from '@wordpress/block-editor';
 
+/**
+ * function that sets final appearance of redline block
+ * return @JSX
+ */
+
 export default function Save( { attributes } ) {
 	const { title, url, alt } = attributes;
 	return (

@@ -2,6 +2,11 @@ import { useBlockProps, RichText } from '@wordpress/block-editor';
 import { faArrowDown } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
+/**
+ * function that sets up final appearance of accordion block
+ * return @JSX
+ */
+
 export default function save({ attributes }) {
 	const { question, answer, answerId, arrowId } = attributes;
 

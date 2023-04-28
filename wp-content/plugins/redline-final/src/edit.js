@@ -12,6 +12,11 @@ import './editor.scss';
 // https://github.com/alialaa/wp-blocks-course-team-members/tree/block-transforms
 // some inspiration for this block comes from the above github repository
 
+/**
+ * function that sets up edit appearance in CMS of redline block
+ * return @JSX
+ */
+
 function Edit( { attributes, setAttributes, noticeOperations, noticeUI } ) {
 	const { title, url, alt } = attributes;
 	// change title function

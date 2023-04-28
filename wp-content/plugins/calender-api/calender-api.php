@@ -71,7 +71,7 @@ function format_date($date){
  }
 
  /**
-  * Function that calls google_calender that call api and returns ahtml string
+  * Function that calls google_calender api and returns a html string
   * @return string
   */
 function google_calender_func(){

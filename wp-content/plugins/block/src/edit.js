@@ -7,6 +7,11 @@ import { v4 as uuidv4 } from 'uuid';
 import { useEffect } from 'react';
 import './editor.scss';
 
+/**
+ * function that sets up edit appearance in CMS of accordion block
+ * return @JSX
+ */
+
 export default function Edit({ attributes, setAttributes }) {
 	// destructure attributes of the block which are defined in index.js
 	const { question, answer, answerId, arrowId } = attributes; // destructure attributes of the wp-block
