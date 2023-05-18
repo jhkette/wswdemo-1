@@ -24,19 +24,17 @@
  function twitter_call(){
     // id of twitter profile taken from wp-config file
     $id = TWITTER_ID;
-    /* this url has been constructed using the twitter api docs to get the */
+    /* this url has been constructed using the twitter api docs to exclude retweets
+    get an profile image etc */
     $remote_url = 'https://api.twitter.com/2/users/'.$id.'/tweets?exclude=retweets&max_results=5&user.fields=profile_image_url&expansions=author_id';
     // this value should be defined in wp-config file
     $id_token = TWEET_API;
     // creating an args array with the header information to be sent to Twitter Api
     $args = array(
-    'headers'     => array(
-        'Authorization' => 'Bearer ' . $id_token,
-        ),
-    ); 
-    // initialise empty string variable
-    
+    'headers'     => array('Authorization' => 'Bearer ' . $id_token),
+    );  
     try{
+        // intitialise empty string variable
         $string="";
         // get rsult from api with url and args as arguments
         $result = wp_remote_get( $remote_url, $args );
@@ -61,7 +59,6 @@
                 // construct html string with each tweet with a profile pic
                 $string .= "<div class=\"container-tweet\"> <img src=\"".esc_url($user_url)."\" alt=\"profile image\"/><p>".esc_html($item["text"])."</p></div>";
                 $i++;
-
             }
             // return the string value
             return $string;
